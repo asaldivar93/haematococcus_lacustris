@@ -1,0 +1,49 @@
+{
+    "data": {
+        "scatter": [{"marker": {"size": 6,
+                                "line": {"width": 0.75, "color": "rgb(0,0,0)"}},
+                     "error_y": {"color": "rgb(0,0,0)",
+                                 "thickness": 2},
+                     "type": "scatter"}],
+        "box": [{"line": {"width": 1},
+        		 "marker": {"size": 6,
+                            "line": {"width": 2}},
+                 "type": "box"}],
+        "bar": [{"marker": {"line": {"width": 2, "color": "rgb(0,0,0)"}},
+                 "type": "box"}],
+        "contour": [{"colorbar": {"thickness": 12,
+        						  "tickwidth": 2,
+        						  "outlinewidth": 2},
+        			 "line": {"width": 1},
+        		     "type": "contour"}]
+    },
+    "layout": {
+        "font": {"family": "Arial",
+                 "size": 14
+                 },
+        "colorway": ["rgb(49,99,149)", "rgb(17,119,51)", "rgb(184,46,46)", "rgb(209,118,31)", "rgb(95,70,140)",
+ 					 "rgb(177,89,40)",	"rgb(166,206,227)", "rgb(178,223,138)", "rgb(251,154,153)", "rgb(253,191,111)",
+ 					 "rgb(202,178,214)","rgb(255,255,179)","rgb(56,166,165)","rgb(162,117,19)","rgb(146,209,209)","rgb(210,192,156)",
+ 					 "rgb(206,201,16)", "rgb(181, 10, 42)", "rgb(49,99,149)", "rgb(17,119,51)", "rgb(184,46,46)", "rgb(209,118,31)", "rgb(95,70,140)",
+ 					 "rgb(177,89,40)",	"rgb(166,206,227)"],
+        "height": 350,
+        "width": 500,
+        "margin": {"l": 30, "r": 10, "b": 20, "t": 20},
+        "xaxis": {"title": {"standoff": 10},
+                  "linewidth": 2,
+                  "tickwidth": 2,
+                  "mirror": true
+                  },
+        "yaxis": {"title": {"standoff": 10},
+                  "linewidth": 2,
+                  "tickwidth": 2,
+                  "mirror": true
+                  },
+        "coloraxis": {"colorbar": {"title": {"side": "right"},
+                                "thickness": 12,
+                                "outlinewidth": 2,
+                                "tickwidth": 2
+                                }
+                   }
+    }
+}

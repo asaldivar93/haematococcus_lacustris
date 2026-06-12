@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[project]
+requires-python = ">=3.13"
+name = "h_lacustris"
+version = "0"
+description = "H. lacustris M-model"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+	"cobra",
+	"plotly",
+	"ipykernel",
+	"numpy",
+	"polars>=1.37.1",
+	"pandas",
+	"networkx",
+	"notebook",
+	"statsmodels",
+	"lmfit",
+	"tqdm"
+	]
