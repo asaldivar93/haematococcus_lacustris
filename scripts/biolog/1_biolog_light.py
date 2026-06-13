@@ -3,10 +3,17 @@ from pathlib import Path
 
 import numpy as np
 import polars as pl
-from labutils.models.growth import Gompertz
-from labutils.tecan import load_tecan_scan_dir
-from scipy.stats import ttest_ind
+from labutils.models.growth import (
+    Gompertz,
+    fit_groups_to_gompertz,
+)
+from labutils.tecan import (
+    load_tecan_scan_dir,
+    correct_by_pathlenght,
+)
+from scipy.stats import ttest_ind_from_stats, f
 from xlsxwriter import Workbook
+
 
 if __name__=="__main__":
     # Load the data
@@ -18,78 +25,33 @@ if __name__=="__main__":
     data_df = data_df.rename({"key": "plate", "sheet": "replicate"})
 
     # Correct the absorbance with the pathlenght
-    gpb = data_df.group_by("plate", "replicate", "well", "date")
-    df_to_concat = []
-    for name, data in gpb:
-        abs980 = data.filter(pl.col("wavelength")==980)["absorbance"][0]
-        abs900 = data.filter(pl.col("wavelength")==900)["absorbance"][0]
-        volume = (abs980 - abs900) / 0.0010018
-        pathlenght = (0.0055 * volume) + 0.0128
-        corrected = (
-            data
-            .with_columns(
-                (pl.col("absorbance") / pathlenght)
-                .alias("abs_corrected"),
-            )
-        )
-        df_to_concat.append(corrected)
+    gpby_cols = ["plate", "replicate", "well", "date"]
+    data_df = correct_by_pathlenght(data_df, gpby_cols)
 
-    data_df = pl.concat(df_to_concat).sort("date", "plate", "well")
+
 
     # Fit Gompertz model
     x0 = [0.5, 0.1, 1]
-    xmin = [0.01, 0.001, 0.01]
-    model = Gompertz(x0, xmin)
+    xmin = [0.01, 0.001, 0.0001]
     time = "days"
-
-    query = data_df.filter(pl.col("wavelength")==680)
-    gpb_cols = ["plate", "replicate", "well"]
-    gpb = query.group_by(gpb_cols)
-
-    data_list = []
-    results_list = []
-    for name, data in gpb:
-        data = data.sort("date")
-        t = data[time].to_numpy()
-        # Log transform the absorbance
-        y_min = data["abs_corrected"].min()
-        y = data["abs_corrected"].to_numpy()
-        y_log = np.log(y / y_min)
-
-        # Fit
-        fit = model.fit(t, y_log)
-        error = fit.eval_uncertainty(sigma=0.9545, t=t)
-
-        # Append best fit and log absorbance
-        fitted_data = (
-            data
-            .with_columns(
-                pl.lit(pl.Series(y_log)).alias("y_log"),
-                pl.lit(pl.Series(fit.best_fit)).alias("y_pred"),
-                pl.lit(pl.Series(error).alias("error")),
-            )
-        )
-        data_list.append(fitted_data)
-
-        new_dict = {
-            "K": fit.params["K"].value,
-            "mu": fit.params["mu"].value,
-            "L": fit.params["L"].value,
-            "K_err": fit.params["K"].stderr,
-            "mu_err": fit.params["mu"].stderr,
-            "L_err": fit.params["L"].stderr,
-            "R2": fit.rsquared,
-        }
-        new_dict.update(dict(zip(gpb_cols, name)))
-        results_list.append(new_dict)
-
-    data_df = pl.concat(data_list)
-    results_df = pl.DataFrame(results_list, orient="row")
+    gpb_cols = ["plate", "well"]
+    data_df, results_df, fits = fit_groups_to_gompertz(
+        data_df, 680, x0, xmin, gpb_cols, ["well", "A1"], "days"
+    )
 
     # Growth decision based on growth rates
+    decision_growth = (
+        results_df
+        .group_by(["plate", "well"])
+        .agg(
+            pl.col("mu").mean(),
+            (pl.col("mu").std() + pl.col("mu_err").pow(2).sum() / 9)
+            .sqrt().alias("mu_err"),
+        )
+    )
+
+    gpb = results_df.group_by(["plate"])
     results_list = []
-    gpb_cols = ["plate", "replicate"]
-    gpb = results_df.group_by(gpb_cols)
     for name, data in gpb:
         # Eval if mu_well is larger that mu_ref + 1 * stddev
         mu_ref = data.filter(pl.col("well")=="A1")["mu"][0]
@@ -97,62 +59,58 @@ if __name__=="__main__":
         result = (
             data
             .with_columns(
-                (pl.col("mu") > (mu_ref + std_ref)).alias("growth")
+                ((pl.col("mu") - pl.col("mu_err")) > (mu_ref)).alias("growth")
             )
         )
         results_list.append(result)
-    results_df = pl.concat(results_list)
-
-    # Growth is positive if True in more than 2 replicates
-    cols = ["plate", "well"]
-    gpb = results_df.group_by(cols)
-    results_list = []
-    for name, data in gpb:
-        growth = data["growth"].sum() >= 2
-        new_dict = {"growth": growth, "method": "mu"}
-        new_dict.update(dict(zip(cols, name)))
-        results_list.append(new_dict)
-
-    decision_growth = pl.DataFrame(results_list, orient="row")
+    decision_growth = pl.concat(results_list)
 
     # Growth decision based on p-vals
     # Growth decision based on p-values and log2fc
     p_thr = 0.05
-    log2_fc_thr = 0.5
-
+    log2_fc_thr = 1.5
     gpb = results_df.group_by("plate")
     df_to_concat = []
     for name, data in gpb:
         # Get mu vals for well A1
-        mu_ref = data.filter(pl.col("well")=="A1")["mu"].to_numpy()
+        mu_ref = data.filter(pl.col("well")=="A1")["mu"][0]
         gpb_2 = data.group_by("well")
         for well, data_2 in gpb_2:
-            # Get mu values for every other well
-            mu_test = data_2["mu"].to_numpy()
-            # Welch's t-test and get log2(test/ref)
-            stat, p = ttest_ind(mu_ref, mu_test, equal_var=False)
-            log2_fc = np.log2(np.mean(mu_test) / np.mean(mu_ref))
+            # Get F-test and p-val
+            fit_ref, _ = fits[f"{name[0]}_A1"]
+            fit_e, fit_r = fits[f"{name[0]}_{well[0]}"]
+            chi2_r = fit_r.chisqr
+            chi2_e = fit_e.chisqr + fit_ref.chisqr
+            p = len(fit_e.params)
+            N = 2*len(fit_e.best_fit)
+            f_val = ((chi2_r - chi2_e) / p) / (chi2_e / (N - 2*p))
+            p_val = f.sf(f_val, p, N - 2*p)
+
+            # Get log2FC
+            mu_test = data_2["mu"][0]
+            log2_fc = np.log2(mu_test / mu_ref)
             # Save the data
             new_dict = {
                 "plate": name[0],
-                "well": well,
-                "p-val": p,
-                "log10_p": -np.log10(p),
+                "well": well[0],
+                "p_val": p_val,
+                "f_val": f_val,
+                "log10_p": -np.log10(p_val),
                 "log2_fc": log2_fc,
                 # growth is True if p-val and log2FC are above the thresholds
-                "method": "pvalue",
-                "growth": (p < p_thr) and (log2_fc > log2_fc_thr),
+                "growth": (p_val < p_thr) and (log2_fc > log2_fc_thr),
             }
             df_to_concat.append(pl.DataFrame(new_dict))
     decision_pval = pl.concat(df_to_concat)
 
     # True in both methods
-    a = decision_growth.filter(pl.col("growth")).select("plate", "well")
+    a = decision_growth.filter(pl.col("growth")).select("plate", "well").sort("plate", "well")
     b = decision_pval.filter(pl.col("growth")).select("plate", "well")
     decision_both = (
         b
         .join(a, on=["plate", "well"], how="inner")
         .with_columns(pl.lit(True).alias("growth"))
+        .sort("plate", "well")
     )
 
     biolog_map = pl.read_excel("data/external/biolog_map.xlsx")
@@ -193,11 +151,7 @@ if __name__=="__main__":
     decision_final = pl.concat([decision_both, missing])
     query = (
         results_df
-        .group_by("plate", "well")
-        .agg(
-            pl.col("mu").mean(),
-            (pl.col("mu").std() + pl.col("mu_err").pow(2).sum() / 9).sqrt().alias("mu_err")
-        )
+        .select("plate", "well", "mu", "mu_err")
         .join(decision_final, on=["plate", "well"])
     )
 
@@ -208,10 +162,6 @@ if __name__=="__main__":
         data_df.write_excel(
             wb,
             worksheet="data",
-        )
-        results_df.write_excel(
-            wb,
-            worksheet="fit",
         )
         decision_growth.write_excel(
             wb,
