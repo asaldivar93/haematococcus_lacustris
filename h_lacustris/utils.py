@@ -39,30 +39,12 @@ def update_metabolites(metabolites_df: pl.DataFrame) -> list[Metabolite]:
             compartment=met["met_id"][-1],
         )
 
-        # Get bigg database_links
-        annotation = bigg_metabolites.filter(
-            pl.col("universal_bigg_id") == met["met_id"]
-        )["database_links"].to_list()
-        # A patch for db_links with null values
-        if annotation and annotation[0] is None:
-            annotation = []
-        # Add annotation if available
-        if annotation:
-            # get nested list of [[db_name, db_entry]]
-            annotation_list = [entry.split(":", 1) for entry
-                               in annotation[0].replace(" ","").split(";")]
-            # Remove the uri from the db_entry
-            annotation_df = pl.DataFrame(
-                annotation_list,
-                schema=["db_name", "identifier"],
-                orient="row"
-            ).unique("db_name", keep="first").with_columns(
-                db_name=pl.col("db_name").str.replace_many(db_key_map),
-                identifier=pl.col("identifier").str.split("/").list.get(-1),
-            )
-            # Build a dict of {db_name: db_entry}
-            annotation_dict = dict(zip(annotation_df["db_name"], annotation_df["identifier"]))
-            new_met.annotation = annotation_dict
+        # Only the annotations should be left in the row dict
+        keys_to_remove = ["met_id", "formula", "name", "charge", "met_id"]
+        for key in keys_to_remove:
+            met.pop(key)
+        new_met.annotations = met
+
         mets_to_add.append(new_met)
 
     return mets_to_add

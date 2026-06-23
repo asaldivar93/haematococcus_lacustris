@@ -3,14 +3,10 @@ from pathlib import Path
 
 import cobra
 import polars as pl
-from cobra.flux_analysis import gapfill
+from labutils.cobra.biomass import fix_biomass_mw
+from labutils.cobra.io import write_excel
 from tqdm import tqdm
 
-from labutils.cobra.flux_analysis import (
-    build_directed_bipartite_graph,
-    find_blocked_metabolites,
-)
-from labutils.cobra.io import write_excel
 
 def find_difference(model_1, model_2):
     model_1_df = [(rxn.id, rxn.bounds, list(rxn.compartments))
@@ -60,14 +56,21 @@ if __name__=="__main__":
     strain = "redball"
     model_file = Path(f"models/draft/v0.0.5/{strain}/{strain}.xml")
     reference = cobra.io.read_sbml_model(model_file)
-
-    # Finds essential reactions in the reference model
     ref_rxns = {rxn.id for rxn in reference.reactions}
 
     # Load the model
     strain = "nies144"
     model_file = Path(f"models/draft/v0.0.5/{strain}/{strain}.xml")
     model = cobra.io.read_sbml_model(model_file)
+    reactions_df = pl.read_excel(
+        f"models/draft/v0.0.5/{strain}/{strain}.xlsx",
+        sheet_name="reactions"
+    )
+
+    # Normalize biomass reaction
+    biomass_rxns = ["BIOMASS_hlacus_auto", "BIOMASS_hlacus_mixo", "BIOMASS_hlacus_hetero"]
+    for rxn_id in biomass_rxns:
+        fix_biomass_mw(model, rxn_id)
 
     # Find reactions that are different in the reference and the model
     different = find_difference(reference, model)
@@ -91,7 +94,10 @@ if __name__=="__main__":
     rxns_to_add = [reference.reactions.get_by_id(rxn_id).copy()
         for rxn_id in missing_rxns]
     model.add_reactions(rxns_to_add)
+
     model.slim_optimize()
+
+
 
     # Save the model
     out_dir = Path("models/draft/v0.0.6/nies144/")

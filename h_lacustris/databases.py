@@ -190,7 +190,7 @@ bigg_lazy = pl.scan_csv(
     new_columns=["bigg.reaction"],
 )
 
-BIGG_RXNS_DB = bigg_lazy.select("bigg.reaction", "name", "reaction_string")
+BIGG_RXNS_DB = bigg_lazy#.select("bigg.reaction", "name", "reaction_string")
 
 bigg_mets = pl.scan_csv(
     DATABASE_PATH / "bigg/bigg_metabolites.tsv",
@@ -213,11 +213,4 @@ BIGG_METS_DB = (
         .list.to_struct(fields=["database", "xref"]),
     )
     .unnest("database_links")
-    # .filter(~pl.col("database").is_null())
-    .pivot(
-        on="database",
-        on_columns=["metanetx.chemical"],
-        values="xref",
-        aggregate_function="first",
-    )
 )

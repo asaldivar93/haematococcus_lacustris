@@ -17,7 +17,7 @@ from xlsxwriter import Workbook
 
 if __name__=="__main__":
     # Load the data
-    data_dir = Path("data/0_raw/E260123/optical_density")
+    data_dir = Path("data/0_raw/E260123_biolog_light/optical_density")
     files = [f for f in data_dir.iterdir() if f.is_file()]
     annot_cols = ["key", "condition"]
     data_df = load_tecan_scan_dir(files, annot_cols)
