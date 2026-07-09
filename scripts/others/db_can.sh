@@ -1,0 +1,1 @@
+run_dbcan easy_substrate --db_dir ~/databases/dbcan --input_raw_data data/external/genomes/h_lacustris/GCA_011766145.1_Lacustris_1.0_protein.faa --output_dir data/2_processed/annotation/dbcan --input_gff data/external/genomes/h_lacustris/GCA_011766145.1_Lacustris_1.0_genomic.gff --feature_type CDS --threads 12 --mode protein --fungi

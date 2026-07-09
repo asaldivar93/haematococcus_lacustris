@@ -1,2 +1,3 @@
 Migrate functions in biolog/plots and biolog/biolog to labutils
 Rework fit gompertz function
+Pool all glucoses together (alpha, beta, d-glucose)?

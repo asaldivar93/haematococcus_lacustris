@@ -1,0 +1,10 @@
+#!/bin/bash
+
+seqkit split proteins.faa -s 5000
+
+for split in nies144/proteins.faa.split/*;
+do
+	outdir=${split}_dt
+	#mkdir $outdir
+	python predict.py --fasta $split --output-dir $outdir
+done

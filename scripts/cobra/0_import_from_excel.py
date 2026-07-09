@@ -3,7 +3,7 @@
 import cobra
 import polars as pl
 from cobra import Metabolite, Model, Reaction
-from labutils.cobra.utils import cobra_to_excel
+from labutils.cobra.io import write_excel
 
 compartments = {
     "u": "thylakoid",
@@ -100,7 +100,7 @@ def fix_metabolites(file):
     """
     metabolites_df = pl.read_excel(file, sheet_name="metabolites")
     # Load dict of manully curated metabolite ids
-    file = "data/interim/curation/alexis/updates_to_model.xlsx"
+    file = "data/1_interim/curation/alexis/updates_to_model.xlsx"
     # corrected_ids
     corrected_met_ids = pl.read_excel(file, sheet_name="corrected_ids").filter(
         pl.col("type") == "metabolite",
@@ -130,7 +130,7 @@ def fix_metabolites(file):
 
     # Mets with bigg id identified from description
     mets_wo_bigg, mets_with_name = find_ids_wo_bigg(metabolites_df)
-    mets_with_name.write_csv("data/interim/curation/corrected_mets_by_name.csv")
+    mets_with_name.write_csv("data/1_interim/curation/corrected_mets_by_name.csv")
 
     # Replace ids based on bigg database
     # I actually don't remember why this is here
@@ -139,7 +139,7 @@ def fix_metabolites(file):
 
     # Mets without bigg after looking through bigg database
     mets_wo_bigg, mets_with_name = find_ids_wo_bigg(metabolites_df)
-    mets_wo_bigg.write_csv("data/interim/curation/alexis/mets_wo_bigg.csv")
+    mets_wo_bigg.write_csv("data/1_interim/curation/alexis/mets_wo_bigg.csv")
 
     # These are metabolites with illegal characters
     urgent_mets = [met_id for met_id in metabolites_df["unique_id"]
@@ -148,7 +148,7 @@ def fix_metabolites(file):
         pl.col("unique_id"),
         pl.col("name"),
         pl.col("formula"),
-    ).write_csv("data/interim/curation/alexis/illegal_mets.csv")
+    ).write_csv("data/1_interim/curation/alexis/illegal_mets.csv")
 
     return metabolites_df
 
@@ -177,7 +177,7 @@ def fix_reactions(file):
     """
     metabolites_df = pl.read_excel(file, sheet_name="reactions")
     # Load dict of manully curated metabolite ids
-    file = "data/interim/curation/alexis/updates_to_model.xlsx"
+    file = "data/1_interim/curation/alexis/updates_to_model.xlsx"
     # corrected_ids
     corrected_met_ids = pl.read_excel(file, sheet_name="corrected_ids").filter(
         pl.col("type") == "reaction",
@@ -214,7 +214,7 @@ def fix_reactions(file):
                 ).sort("unique_id")
             )
         raise ValueError("Some mets have multiple matches to bigg ids")
-    mets_with_name.write_csv("data/interim/curation/alexis/corrected_rxns_by_name.csv")
+    mets_with_name.write_csv("data/1_interim/curation/alexis/corrected_rxns_by_name.csv")
 
     # replace old ids with new new ids
     # I'm using this method instead of replace_many to make sure that
@@ -224,24 +224,24 @@ def fix_reactions(file):
     metabolites_df = replace_ids(metabolites_df, replace_mets)
 
     mets_wo_bigg, mets_with_name = find_rxns_wo_bigg(metabolites_df)
-    mets_wo_bigg.write_csv("data/interim/curation/alexis/rxns_wo_bigg.csv")
+    mets_wo_bigg.write_csv("data/1_interim/curation/alexis/rxns_wo_bigg.csv")
 
     urgent_mets = [met_id for met_id in metabolites_df["unique_id"]
                           if any(char in met_id for char in illegal_chars)]
     metabolites_df.filter(pl.col("unique_id").is_in(urgent_mets)).select(
         pl.col("unique_id"),
         pl.col("name"),
-    ).write_csv("data/interim/curation/alexis/illegal_rxns.csv")
+    ).write_csv("data/1_interim/curation/alexis/illegal_rxns.csv")
 
     return metabolites_df
 
 if __name__=="__main__":
-    file = "data/external/bigg_metabolites.tsv"
-    bigg_metabolites = pl.read_csv(file, separator="\t")
+    file = "models/external/databases/bigg/bigg_metabolites.tsv"
+    bigg_metabolites = pl.read_csv(file, separator="\t", ignore_errors=True)
     unique_bigg_mets_df = bigg_metabolites.unique("universal_bigg_id", keep="first")
     # Load bigg reactions
-    file = "data/external/bigg_reactions.tsv"
-    bigg_reactions = pl.read_csv(file, separator="\t")
+    file = "models/external/databases/bigg/bigg_reactions.tsv"
+    bigg_reactions = pl.read_csv(file, separator="\t", ignore_errors=True)
 
     file = "models/draft/v0.0.0/Hlacustris.xlsx"
     metabolites_df = fix_metabolites(file)
@@ -313,19 +313,34 @@ if __name__=="__main__":
     model.add_metabolites(mets_to_add)
 
     # Add reactions to model
+    gene_dict = pl.read_csv("data/external/model_to_red_dict.csv", has_header=False).drop_nulls()
+    model_to_red_dict = dict(zip(gene_dict["column_1"], gene_dict["column_2"]))
+
+    reactions_df = reactions_df.with_columns(pl.col("Gene").str.replace_many(model_to_red_dict))
+    rxns_to_add = []
     for rxn in reactions_df.iter_rows(named=True):
         if any([isinstance(rxn["lower_bound"], str), isinstance(rxn["upper_bound"], str)]):
             print(rxn["id"])
+
+        try:
+            subsystem = model.groups.get_by_id(rxn["subsystem"])
+        except KeyError:
+            subsystem = cobra.core.Group(rxn["subsystem"])
+            subsystem.type = "subsystem"
+            subsystem.kind = "collection"
+            model.add_groups([subsystem])
+
         new_rxn = Reaction(
             id=rxn["unique_id"],
-            name=rxn["name"],
+            name=str(rxn["name"]),
             subsystem=rxn["subsystem"],
             lower_bound=rxn["lower_bound"],
             upper_bound=rxn["upper_bound"],
         )
         if rxn["Gene"]:
-            new_rxn.gene_reaction_rule = rxn["Gene"]
-
+            if "KAJ" in rxn["Gene"]:
+                new_rxn.gene_reaction_rule = rxn["Gene"]
+        subsystem.add_members([new_rxn])
         # Get bigg database_links
         annotation = bigg_reactions.filter(
             pl.col("bigg_id") == rxn["id"]
@@ -361,10 +376,7 @@ if __name__=="__main__":
 
     model.objective = "BIOMASS_hlacus_auto"
     cobra.io.save_json_model(model, "models/draft/v0.0.1/hlacustris.json")
-
-    model = cobra.io.load_json_model("models/draft/v0.0.1/hlacustris.json")
     cobra.io.write_sbml_model(model, "models/draft/v0.0.1/hlacustris.xml")
     cobra.io.validate_sbml_model("models/draft/v0.0.1/hlacustris.xml")
-    model = cobra.io.read_sbml_model("models/draft/v0.0.1/hlacustris.xml")
-    cobra_to_excel(model, "models/draft/v0.0.1/hlacustris.xlsx")
+    write_excel(model, "models/draft/v0.0.1/hlacustris.xlsx")
     model.optimize()

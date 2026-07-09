@@ -17,6 +17,7 @@ from h_lacustris.databases import (
     METANETX_RXNS_DB,
     MTNTX_COMPARTMENTS,
 )
+BIGG_METS_DB.collect()
 
 LOCATION_REGEX = "(" + "|".join(map(re.escape, MTNTX_COMPARTMENTS)) + ")"
 
@@ -156,10 +157,10 @@ def get_metabolites(rxns_lazy: pl.LazyFrame) -> pl.LazyFrame:
         .sort("met_id")
         .unique(subset="met_id")
         .join(
-            METANETX_METS_DB,
-            left_on="metanetx.chemical",
-            right_on="id",
-            how="left",
+           METANETX_METS_DB,
+           left_on="metanetx.chemical",
+           right_on="id",
+           how="left",
         )
     )
 
@@ -277,10 +278,10 @@ if __name__ == "__main__":
     pident_cut: float = 40
     qcov_cut: float = 0.6
     tcov_cut: float = 0.6
-    out_dir = Path("test/")
+    #out_dir = Path("test/")
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    inputs_path="data/add_ec.list"
+    # inputs_path="data/add_ec_2.list"
     worklist = pl.read_csv(inputs_path)
     for row in worklist.iter_rows(named=True):
         strain_dir = out_dir / f"{row["id"]}"
@@ -291,7 +292,7 @@ if __name__ == "__main__":
         faa_path = Path(row["genomes"])
 
         # Load base model
-        print(f"Loading model for strain {strain} in {model_path}")
+
         model = cobra.io.read_sbml_model(model_path)
         mets_in_model = [met.id for met in model.metabolites]
         biggs_in_model = [rxn.id for rxn in model.reactions]
@@ -332,6 +333,7 @@ if __name__ == "__main__":
 
         new_rxns = new_rxns.collect()
         new_mets = new_mets.collect()
+        print(f"Loading model for strain {strain} in {model_path}")
         print(f"Adding {new_rxns.shape} new reactions")
         print(f"Adding {new_mets.shape} new metabolites")
 

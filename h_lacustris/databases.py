@@ -76,6 +76,7 @@ IDENTIFIERS_ORG_MAP = {
     "vmhR": "vmhreaction",
     "sabiorkR": "sabiork.reaction",
     "keggR": "kegg.reaction",
+    "ReactomeReaction": "reactome",
 }
 
 obsolete_rxn = "secondary/obsolete/fantasy identifier"
@@ -213,4 +214,11 @@ BIGG_METS_DB = (
         .list.to_struct(fields=["database", "xref"]),
     )
     .unnest("database_links")
+    .pivot(
+        index=["bigg_id", "name", "universal_bigg_id"],
+        on="database",
+        on_columns=on_columns,
+        values="xref",
+        aggregate_function="first"
+    )
 )

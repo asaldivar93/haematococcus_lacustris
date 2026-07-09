@@ -25,7 +25,6 @@ model.slim_optimize()
 
 ref = "models/external/iLB1027_lipid.xml"
 model = cobra.io.read_sbml_model(ref)
-model.genes
 
 table = pl.read_csv(
     "data/1_interim/genomes/dict_nies_to_red.csv",
@@ -37,7 +36,7 @@ cdd = pl.read_csv(
     "data/1_interim/genomes/cdd_nies_hits.tsv",
     separator = "\t",
     has_header = False,
-    new_columns = ["query", "target", "pident", "evalue", "bits","qcov","tcov","qlen","tlen", "alln"]
+    new_columns = ["query,target,pident,evalue,bits,qlen,tlen,qstart,qend,tstart,tend"]
 )
 
 gene = "KAJ9516274.1"
