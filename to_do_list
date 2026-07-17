@@ -1,3 +1,20 @@
 Migrate functions in biolog/plots and biolog/biolog to labutils
 Rework fit gompertz function
 Pool all glucoses together (alpha, beta, d-glucose)?
+
+Review charge balance of reaction CAMP6AHDH
+
+wtf: DDSMSTOLD AIRth ASNtx SGOR
+
+ocdccoa == stcoa
+
+G3PAT160 in to be replaced by  G3PAT160_1 MNXR151466
+HEMEASm stoichiometry is incorrect remove and add back MNXR145183
+SGOR stoichiometry looks incorrect MNXR198636
+SQDGS160 stoichiometry looks incorrect MNXR146450 RXN-1224 MNXR117434
+UREAtm is replaced by UREAtm_1 MNXR105157
+UREAt is replaced by  UREAt_1 MNXR105157
+review photorespiration
+review superpathway of purines degradation in plants
+review selenoaminoacids metabolism
+review stachyose biosynthesis, add back raffinose_c reactions

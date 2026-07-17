@@ -35,10 +35,13 @@ def update_metabolites(metabolites_df: pl.DataFrame) -> list[cobra.Metabolite]:
         )
 
         # Only the annotations should be left in the row dict
-        keys_to_remove = ["date", "met_id", "formula", "name", "charge"]
-        for key in keys_to_remove:
-            met.pop(key)
-        new_met.annotations = met
+        db_xref = ["metanetx.chemical", "metacyc.compound", "inchikey"]
+        annotation = {}
+        for db in db_xref:
+            if met[db] is not None:
+                annotation[db] = met[db]
+
+        new_met.annotation = annotation
 
         mets_to_add.append(new_met)
 
@@ -60,8 +63,7 @@ def update_reactions(reactions_df: pl.DataFrame) -> list[cobra.Reaction]:
             new_rxn.gene_reaction_rule = row["gpr"]
 
         # Only the annotations should be left in the row dict
-        db_xref = ["bigg.reaction", "biocyc", "ec-code", "kegg.reaction", "rhea",
-            "metanetx.reaction", "seed.reaction"]
+        db_xref = ["metanetx.reaction", "ec-code", "metacyc.reaction"]
         annotation = {}
         for db in db_xref:
             if row[db] is not None:
@@ -100,7 +102,7 @@ def update_gprs(model, gene_rules):
             rxn = model.reactions.get_by_id(row["rxn_id"])
             rxn.gene_reaction_rule = row["new_gpr"]
         except KeyError:
-            print(f"{rxn.id} not in model")
+            print(f"{row["rxn_id"]} not in model")
 
 def clean_genes(model):
     genes_to_remove = [g.id for g in model.genes if not bool(g.reactions)]
@@ -108,6 +110,7 @@ def clean_genes(model):
         model.genes.remove(gid)
 
 def update_model(model, updates_path):
+    new_model = model.copy()
     metabolites = pl.read_excel(updates_path, sheet_name="metabolites")
     reactions = pl.read_excel(updates_path, sheet_name="reactions")
     boundary = pl.read_excel(updates_path, sheet_name="boundary_rxns")
@@ -116,22 +119,24 @@ def update_model(model, updates_path):
 
     mets_to_add = update_metabolites(metabolites)
     rxns_to_add = update_reactions(reactions)
-    mets_to_remove, rxns_to_remove = update_dels(model, deletions)
+    mets_to_remove, rxns_to_remove = update_dels(new_model, deletions)
 
-    model.remove_metabolites(mets_to_remove)
-    model.remove_reactions(rxns_to_remove)
+    new_model.remove_metabolites(mets_to_remove)
+    new_model.remove_reactions(rxns_to_remove)
 
     print("Adding mets")
-    model.add_metabolites(mets_to_add)
+    new_model.add_metabolites(mets_to_add)
     print("Adding rxns")
-    model.add_reactions(rxns_to_add)
+    new_model.add_reactions(rxns_to_add)
     for row in reactions.iter_rows(named=True):
-        rxn = model.reactions.get_by_id(row["rxn_id"])
+        rxn = new_model.reactions.get_by_id(row["rxn_id"])
         rxn.build_reaction_from_string(row["reaction"])
     print("Adding boundaries")
-    update_boundary_rxns(model, boundary)
+    update_boundary_rxns(new_model, boundary)
     print("Adding gprs")
-    update_gprs(model, gene_rules)
+    update_gprs(new_model, gene_rules)
+
+    return new_model
 
 def remove_orphan_metabolites(model):
     rxns_to_remove = True
@@ -214,7 +219,6 @@ def clean_gprs(model):
 def get_reaction_annotation(reactions):
     query = (
         reactions
-        .rename({"biocyc": "metacyc.reaction", "ReactomeReaction": "reactome"})
         .select(["id", "metanetx.reaction", "seed.reaction", "metacyc.reaction", "rhea", "reactome"])
     )
     rxns_wo_mtntx = query.filter(pl.col("metanetx.reaction").is_null())
@@ -238,12 +242,11 @@ if __name__=="__main__":
     updates_path = Path("data/1_interim/curation/updates_to_model.xlsx")
 
     # Load Model
-    model = ''
-    model = cobra.io.read_sbml_model(model_path)
+    base = cobra.io.read_sbml_model(model_path)
     reactions = pl.read_excel(excel_path, sheet_name="reactions")
 
     # Update the model
-    update_model(model, updates_path)
+    model = update_model(base, updates_path)
 
     sol = model.optimize()
     model.summary(solution=sol)
@@ -253,6 +256,20 @@ if __name__=="__main__":
     clean_genes(model)
 
     # Fix annotations
+    # Fix reaction annotation
+    # TO DO: move this to another step (maybe 2?)
+    uris_to_fix = {
+        "ECNumber": "ec-code",
+        "KEGGReaction": "kegg.reaction",
+        "biocyc": "metacyc.reaction",
+        "ReactomeReaction": "reactome",
+    }
+    for rxn in model.reactions:
+        for key, val in uris_to_fix.items():
+            identifier = rxn.annotation.get(key, None)
+            if identifier:
+                rxn.annotation[val] = identifier
+                rxn.annotation.pop(key)
     reactions, metabolites, genes = write_excel(model, "models/draft/v0.0.4/nies144/nies144.xlsx")
     annotation_df = get_reaction_annotation(reactions)
 
@@ -269,3 +286,27 @@ if __name__=="__main__":
     exog = [g.id for g in model.genes if "K" in g.id]
     exog.sort()
     len(exog)
+
+    # Test remove reaction
+    rxn_id = "GLYDHD"
+    rxn = model.reactions.get_by_id(rxn_id)
+    model.remove_reactions([rxn])
+    model.slim_optimize()
+
+    model =
+    model_path = Path("models/draft/v0.0.2/nies.xml")
+    model_path = Path("models/draft/v0.0.1/hlacustris.xml")
+
+    model = cobra.io.read_sbml_model(model_path)
+    model.reactions.get_by_id("AGMIS")
+
+    import os
+    rxns_to_test = []
+    with Path("test_rmv").open("r") as f:
+        for line in f:
+            rxns_to_test.append(line.strip())
+
+    rxns_to_rmv = [base.reactions.get_by_id(rid) for rid in rxns_to_test]
+    for rxn in rxns_to_rmv:
+        base.remove_reactions([rxn])
+        print(rxn.id, base.slim_optimize())
