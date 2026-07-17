@@ -288,7 +288,7 @@ if __name__=="__main__":
     len(exog)
 
     # Test remove reaction
-    rxn_id = "GLYDHD"
+    rxn_id = "HMR_2440"
     rxn = model.reactions.get_by_id(rxn_id)
     model.remove_reactions([rxn])
     model.slim_optimize()
@@ -306,7 +306,10 @@ if __name__=="__main__":
         for line in f:
             rxns_to_test.append(line.strip())
 
-    rxns_to_rmv = [base.reactions.get_by_id(rid) for rid in rxns_to_test]
+    rxns_to_rmv = [model.reactions.get_by_id(rid) for rid in rxns_to_test]
     for rxn in rxns_to_rmv:
-        base.remove_reactions([rxn])
-        print(rxn.id, base.slim_optimize())
+        model.remove_reactions([rxn])
+        sol = model.slim_optimize()
+        if sol <= 1e-6:
+            model.add_reactions([rxn])
+            print(rxn.id)

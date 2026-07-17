@@ -8,13 +8,17 @@ wtf: DDSMSTOLD AIRth ASNtx SGOR
 
 ocdccoa == stcoa
 
-G3PAT160 in to be replaced by  G3PAT160_1 MNXR151466
-HEMEASm stoichiometry is incorrect remove and add back MNXR145183
-SGOR stoichiometry looks incorrect MNXR198636
-SQDGS160 stoichiometry looks incorrect MNXR146450 RXN-1224 MNXR117434
-UREAtm is replaced by UREAtm_1 MNXR105157
-UREAt is replaced by  UREAt_1 MNXR105157
 review photorespiration
 review superpathway of purines degradation in plants
 review selenoaminoacids metabolism
 review stachyose biosynthesis, add back raffinose_c reactions
+review sphingolipid biosynthesis (plants)
+review abscisic acid degradation metabolism
+
+consider replacing subreactions PDHe3mr,AKGDHe2r,AKGDHmi with
+  AKGDm 2-oxoglutarate dehydrogenase. Component lpam is in more reactions,
+
+Some reactions are in bigg but the compartment does not match
+Some reactions ids and the stoichiometries dont match
+Some reactions from the chlamydomonas model are only on that model, these
+  can be updated to metacyc reactions?
