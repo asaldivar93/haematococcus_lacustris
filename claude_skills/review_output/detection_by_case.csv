@@ -1,0 +1,13 @@
+metabolite,pass1_signal,pass1_fix,final_high,final_fix
+hicit_m,inchikey + metanetx.chemical + skeleton,no,duplicate_metabolite,curator verb needed
+hisocit_m,inchikey + metanetx.chemical + skeleton,no,duplicate_metabolite,merge_into hicit_m
+stcoa_c,inchikey + metanetx.chemical + skeleton,no,duplicate_metabolite,curator verb needed
+ocdccoa_c,inchikey + metanetx.chemical + skeleton,no,duplicate_metabolite,merge_into stcoa_c
+ocdcea_c,inchikey + metanetx.chemical + skeleton,no,duplicate_metabolite,curator verb needed
+ocdce9a_c,inchikey + metanetx.chemical + skeleton,no,duplicate_metabolite,merge_into ocdcea_c
+cacoa_c,—,no,probable_fantasy_metabolite,curator verb needed
+hmcit_L_m,missing_mnx,no,probable_fantasy_metabolite|shadow_duplicate|uncurated_metabolite,replace_with hcit_m
+gal1p_L_c,—,no,probable_fantasy_metabolite|uncurated_metabolite,merge_into gal1p_c
+2oglutm_h,missing_mnx,no,probable_fantasy_metabolite|shadow_duplicate|uncurated_metabolite,merge_into 2ogm_h
+pchol1801835z9z12z_c,missing_mnx,no,uncurated_metabolite,curator verb needed
+pchol1801845z9z12z15z_c,missing_mnx,no,uncurated_metabolite,curator verb needed

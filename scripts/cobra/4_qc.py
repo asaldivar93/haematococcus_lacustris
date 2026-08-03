@@ -1,3 +1,5 @@
+import asyncio
+
 from pathlib import Path
 
 import cobra
@@ -5,21 +7,12 @@ import polars as pl
 from labutils.cobra.io import write_excel
 
 from h_lacustris.databases import (
+    BIGG_METS_DB,
+    BIGG_RXNS_DB,
     METANETX_METS_DB,
     METANETX_RXNS_DB,
 )
-
-databases = ["ec-code", "bigg.reaction", "seed.reaction", "metacyc.reaction",
-    "kegg.reaction", "reactome", "rh"]
-mtntx_db = (
-    METANETX_RXNS_DB
-    .collect()
-    .select(["id", *databases])
-    .rename({"rh": "rhea"})
-    .with_columns(
-        pl.col("ec-code").list.join("|")
-    )
-)
+from h_lacustris.unichem import check_inchikeys_unichem_bulk
 
 def update_metabolites(metabolites_df: pl.DataFrame) -> list[cobra.Metabolite]:
     """Create list of metabolite instances to add to a model."""
@@ -116,6 +109,7 @@ def update_model(model, updates_path):
     boundary = pl.read_excel(updates_path, sheet_name="boundary_rxns")
     gene_rules = pl.read_excel(updates_path, sheet_name="gpr")
     deletions = pl.read_excel(updates_path, sheet_name="deletions")
+    annotation = pl.read_excel(updates_path, sheet_name="annotation")
 
     mets_to_add = update_metabolites(metabolites)
     rxns_to_add = update_reactions(reactions)
@@ -135,6 +129,20 @@ def update_model(model, updates_path):
     update_boundary_rxns(new_model, boundary)
     print("Adding gprs")
     update_gprs(new_model, gene_rules)
+    print("Adding new annotations")
+    for row in annotation.iter_rows(named=True):
+        try:
+            match row["type"]:
+                case "reaction":
+                    item = new_model.reactions.get_by_id(row["id"])
+                case "metabolite":
+                    item = new_model.metabolites.get_by_id(row["id"])
+                case _:
+                    print(row)
+
+            item.annotation[row["database"]] = row["xref"]
+        except KeyError:
+            print(f"{row["id"]} not in model")
 
     return new_model
 
@@ -216,24 +224,166 @@ def clean_gprs(model):
         rxn = model.reactions.get_by_id(row["id"])
         rxn.gene_reaction_rule = row["new_gpr"]
 
-def get_reaction_annotation(reactions):
+def get_reaction_annotation(reactions_df):
+    """Find rection in databases.
+
+    Finds the reaction in bigg and adds the annotations from bigg. Then finds
+    the reactions in metanetx and adds the annotations. Bigg annotations are
+    superseded by metanetx.
+    """
+    new_annotations = [col for col in BIGG_RXNS_DB.columns
+                       if col not in reactions_df.columns]
     query = (
-        reactions
-        .select(["id", "metanetx.reaction", "seed.reaction", "metacyc.reaction", "rhea", "reactome"])
+        reactions_df
+        .update(
+            BIGG_RXNS_DB.select(pl.exclude(["reaction", "metanetx.reaction"])),
+            on="id",
+            how="left",
+            include_nulls=False,
+        )
+        .join(
+            BIGG_RXNS_DB.select("id", *new_annotations),
+            on="id",
+            how="left",
+        )
+        .drop("model_list", "old_bigg_ids")
     )
-    rxns_wo_mtntx = query.filter(pl.col("metanetx.reaction").is_null())
-    bad_mtntx = (
+    new_annotations = [col for col in METANETX_RXNS_DB.columns
+                       if col not in query.columns]
+    return (
         query
-        .filter(~pl.col("metanetx.reaction").is_null())
-        .join(mtntx_db, left_on="metanetx.reaction", right_on="id", how="anti")
-        .with_columns(pl.lit(True).alias("bad_mtntx"))
+        .update(
+            METANETX_RXNS_DB
+            .rename({"id": "metanetx.reaction"})
+            .select(pl.exclude("bigg.reaction")),
+            on="metanetx.reaction",
+            how="left",
+            include_nulls=False,
+        )
+        .join(
+            METANETX_RXNS_DB.select("id", *new_annotations),
+            left_on="metanetx.reaction",
+            right_on="id",
+            how="left",
+        )
     )
-    rxns_w_mtntx = (
-        query.select(["id", "metanetx.reaction"])
-        .filter(~pl.col("metanetx.reaction").is_null())
-        .join(mtntx_db, left_on="metanetx.reaction", right_on="id", how="inner")
+
+def get_metabolite_annotation(metabolites_df):
+    new_annotations = [col for col in BIGG_METS_DB.columns
+                       if col not in metabolites_df.columns]
+    query = (
+        metabolites_df
+        .rename({"id": "this_id"})
+        .with_columns(pl.col("this_id").str.head(-2).alias("id"))
+        .update(
+            BIGG_METS_DB.select(pl.exclude("metanetx.chemical")),
+            on="id",
+            how="left",
+            include_nulls=False,
+        )
+        .join(
+            BIGG_METS_DB.select("id", *new_annotations),
+            on="id",
+            how="left",
+        )
+        .drop("id", "model_list", "old_bigg_ids")
+        .rename({"this_id": "id"})
     )
-    return pl.concat([rxns_wo_mtntx, bad_mtntx, rxns_w_mtntx], how="diagonal")
+
+    new_annotations = [col for col in METANETX_METS_DB.columns
+                       if col not in query.columns]
+    return (
+        query
+        .update(
+            METANETX_METS_DB
+            .rename({"id": "metanetx.chemical"})
+            .select(pl.exclude("bigg.metabolite")),
+            on="metanetx.chemical",
+            how="left",
+            include_nulls=False
+        )
+        .join(
+            METANETX_METS_DB.select("id", *new_annotations),
+            left_on="metanetx.chemical",
+            right_on="id",
+            how="left"
+        )
+    )
+
+def update_annotations(model, metabolites_df, reactions_df):
+    for row in metabolites_df.iter_rows(named=True):
+        met = model.metabolites.get_by_id(row["id"])
+        met.name = row["name"]
+        met.formula = row["formula"]
+        met.charge = row["charge"]
+        for field in ["id", "name", "formula", "charge"]:
+            row.pop(field)
+
+        annotation = {key: value for key, value in row.items() if value is not None}
+        met.annotation = annotation
+
+    for row in reactions_df.iter_rows(named=True):
+        rxn = model.reactions.get_by_id(row["id"])
+        for field in ["id", "name", "reaction", "gpr", "subsystem"]:
+            row.pop(field)
+        annotation = {key: value for key, value in row.items() if value is not None}
+        rxn.annotation = annotation
+
+def clean_metabolites(model):
+    """Remove metabolites without reactions."""
+    mets_to_remove = [met for met in model.metabolites if len(met.reactions)==0]
+    model.remove_metabolites(mets_to_remove)
+    # Remove orphaned reactions
+    rxns_to_remove = [rxn for rxn in model.reactions
+        if len(rxn.metabolites)==1 and not rxn.boundary]
+    model.remove_reactions(rxns_to_remove)
+
+async def validate_inchikey(metabolites_df):
+    inchi_list = metabolites_df["inchikey"].drop_nulls().unique().to_list()
+    valid_inchi_dict = await check_inchikeys_unichem_bulk(inchi_list, checkpoint_path="inchi_checkpoint.json")
+    valid_inchi_df = pl.DataFrame(valid_inchi_dict)
+    return (
+        metabolites_df
+        .join(
+            valid_inchi_df,
+            on="inchikey",
+            how="left"
+        )
+    )
+
+def validate_metanetx(reactions_df, metabolites_df):
+    query = (
+        reactions_df
+        .filter(~pl.col("metanetx.reaction").is_null())
+        .select("id", "metanetx.reaction")
+        .join(
+            METANETX_RXNS_DB,
+            left_on="metanetx.reaction",
+            right_on="id",
+            how="anti",
+        )
+        .with_columns(pl.lit(False).alias("valid_metanetx"))
+        .drop("metanetx.reaction")
+    )
+    reactions_df = reactions_df.join(query, on="id", how="left")
+
+    query = (
+        metabolites_df
+        .filter(~pl.col("metanetx.chemical").is_null())
+        .select("id", "metanetx.chemical")
+        .join(
+            METANETX_METS_DB,
+            left_on="metanetx.chemical",
+            right_on="id",
+            how="anti",
+        )
+        .with_columns(pl.lit(False).alias("valid_metanetx"))
+        .drop("metanetx.chemical")
+    )
+
+    metabolites_df = metabolites_df.join(query, on="id", how="left")
+
+    return reactions_df, metabolites_df
 
 if __name__=="__main__":
     # Inputs
@@ -243,7 +393,6 @@ if __name__=="__main__":
 
     # Load Model
     base = cobra.io.read_sbml_model(model_path)
-    reactions = pl.read_excel(excel_path, sheet_name="reactions")
 
     # Update the model
     model = update_model(base, updates_path)
@@ -251,12 +400,12 @@ if __name__=="__main__":
     sol = model.optimize()
     model.summary(solution=sol)
 
-    # Find and clean gprs with repeated genes
+    # Clear dangling genes and metabolites
     clean_gprs(model)
     clean_genes(model)
+    clean_metabolites(model)
 
     # Fix annotations
-    # Fix reaction annotation
     # TO DO: move this to another step (maybe 2?)
     uris_to_fix = {
         "ECNumber": "ec-code",
@@ -270,46 +419,86 @@ if __name__=="__main__":
             if identifier:
                 rxn.annotation[val] = identifier
                 rxn.annotation.pop(key)
-    reactions, metabolites, genes = write_excel(model, "models/draft/v0.0.4/nies144/nies144.xlsx")
-    annotation_df = get_reaction_annotation(reactions)
 
-    for row in annotation_df.iter_rows(named=True):
-        rxn_id = row["id"]
-        row.pop("id")
-        annotation = {key: val for key, val in row.items() if val is not None}
-        rxn = model.reactions.get_by_id(rxn_id)
-        rxn.annotation = annotation
+    uris_to_fix = {
+        "biocyc": "metacyc.compound",
+        "KEGGDrug": "kegg.drug",
+        "KEGGGlycan": "keeg.glycan",
+        "inchlkey": "inchikey"
+    }
+    for met in model.metabolites:
+        for key, val in uris_to_fix.items():
+            identifier = met.annotation.get(key, None)
+            if identifier:
+                met.annotation[val] = identifier
+                met.annotation.pop(key)
 
-    reactions, metabolites, genes = write_excel(model, "models/draft/v0.0.4/nies144/nies144.xlsx")
+    # update annotations
+    out_path = "models/draft/v0.0.4/nies144/nies144.xlsx"
+    reactions_df, metabolites_df = write_excel(model, out_path)
+    reactions_df = get_reaction_annotation(reactions_df)
+    metabolites_df = get_metabolite_annotation(metabolites_df)
+    metabolites_df = await validate_inchikey(metabolites_df)
+    reactions_df, metabolites_df = validate_metanetx(reactions_df, metabolites_df)
+
+    # save the changes
+    update_annotations(model, metabolites_df, reactions_df)
+    reactions_df, metabolites_df  = write_excel(model, out_path)
+    cobra.io.write_sbml_model(model, "models/draft/v0.0.4/nies144/nies144.xml")
+
 
     # Exogenous genes
     exog = [g.id for g in model.genes if "K" in g.id]
     exog.sort()
     len(exog)
-
     # Test remove reaction
-    rxn_id = "HMR_2440"
-    rxn = model.reactions.get_by_id(rxn_id)
-    model.remove_reactions([rxn])
-    model.slim_optimize()
+    model = cobra.io.read_sbml_model("models/draft/v0.0.4/nies144/nies144.xml")
+    test = model.copy()
+    rxn_id = "NOS2"
+    rxn = test.reactions.get_by_id(rxn_id)
+    test.remove_reactions([rxn])
+    sol = test.optimize()
+    sol
+    met = test.metabolites.get_by_id("man_c")
+    test.add_boundary(met, type="sink")
+    met.summary(solution=sol)
 
-    model =
     model_path = Path("models/draft/v0.0.2/nies.xml")
     model_path = Path("models/draft/v0.0.1/hlacustris.xml")
 
     model = cobra.io.read_sbml_model(model_path)
     model.reactions.get_by_id("AGMIS")
 
-    import os
     rxns_to_test = []
     with Path("test_rmv").open("r") as f:
         for line in f:
             rxns_to_test.append(line.strip())
 
-    rxns_to_rmv = [model.reactions.get_by_id(rid) for rid in rxns_to_test]
+    rxns_to_rmv = [test.reactions.get_by_id(rid) for rid in rxns_to_test]
     for rxn in rxns_to_rmv:
-        model.remove_reactions([rxn])
-        sol = model.slim_optimize()
+        test.remove_reactions([rxn])
+        sol = test.slim_optimize()
         if sol <= 1e-6:
-            model.add_reactions([rxn])
-            print(rxn.id)
+            test.add_reactions([rxn])
+            print(rxn.id, sol)
+
+
+
+    for row in annotation.iter_rows(named=True):
+        match row["type"]:
+            case "reaction":
+                item = model.reactions.get_by_id(row["id"])
+            case "metabolite":
+                item = model.metabolites.get_by_id(row["id"])
+            case _:
+                print(row)
+        #
+        # for f in ["type", "id", "method"]:
+        #     row.pop(f)
+        #
+        # for db, val in row.items():
+        #     if val is not None:
+        #         item.annotation[db] = val
+
+
+row

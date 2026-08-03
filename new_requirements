@@ -1,0 +1,5 @@
+
+	- A way to calibrate PlcActuators, store the calibration results, reload them and recalibrate at runtime
+	- A new control mode in which the goal is to control the flow rate of DC peristaltic pump, this will use calibration results.
+	- A new control mode in which the goal is to control the volume added for a DC peristaltic pump, this will use calibration results.
+	- Use flow rate control or volumen control within _PidControl and _OnBoundariesControl

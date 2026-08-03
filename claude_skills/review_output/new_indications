@@ -1,0 +1,23 @@
+0. Before moving on with the work, verify if you have access to the chebi, pubchem and unichem APIs. Write reference patterns you can reuse to access and propagate metabolite annotations (names, formula, charges, cross-references). A reference pattern for unichem is provided in the unichem.py file. Be a good API citizen, add rate limits to API queries following each API guidelines if available, or at you discretion.
+
+1. A large part finding errors depends on having the correct annotations for the metabolite. To improve the curation loop, you are expected to invoke skills metanetx chem mapping and metanetx metabolite update and output a single metanetx_update file with metanetx identifiers to review and mentanetx identifiers to add. The human in the loop will review such file to update the annotations before the second round of revisions. If you find it appropiate, modify, update and integrate those skills into this one.
+
+2. To resolve mass and charge imbalance prioritize the annotation available in databases. If charge and formula are not available in metanetx or if the metabolite already has the correct charge and formula annotation, cross-reference this information with other databases. If a metabolite can have multiple charges/formulas, consider the information available on the databases as the ground truth. If using those charges/formulas does not resolve the imbalance, raise a flag and a note for a reaction_reviewer agent, and defer the fix to a reaction review round. Prioritise information on chebi, pubchem, and unichem.
+
+3. Do not include charge and mass imbalance errors in the first round of review. Instead store these errors in a separate file that you will use in the second review round, after the human reviewer has updated the metanetx annotations.
+
+4. Not all metabolites are expected to have all cross-references. Do not raise a missing_annotations error if a metabolite has at least one more cross-reference different from bigg, metanetx and seed.
+
+5. Do not raise metanetx_id errors, instead refer to point 1.
+
+6. Before raising an inchikey error, verify if any of the inchikeys is a valid inchikey using the unichem api. The fix should propose keeping the valid inchikey. If more than one inchikeys are valid, prioritize metanetx over bigg or the models inchikey.  Refer to unichem.py for patterns on how to validate an inchikeys using the unichem API.
+
+7. Do not include the context and imbalance sheets in the metabolite_review.xlsx as they are of little use to human curator.
+
+8. Add a fix_accepted column to the review sheet. The curator will update this column and you will use the curator_decision and the fix_accepted columns to populate an updates_to_model.xlsx file that will be used as a worksheet to update the sbml model using cobrapy. You are meant to UPDATE this file, DO NOT overwrite this file, because it will be used by other agents in different stages of the review process and it will be the final loogbook of all the changes made to the model. If you don't find one in the working directory or one is not provided to you, ask for permission to generate a new one.
+
+9. Propose patterns that the curator should use in the curator_decision column, so that you can later use the column to populate the updates_to_model file.
+
+10. When populating the updates_to_model.xlsx file, ignore all rows for which the column fix_accepted is different from TRUE.
+
+11. The model must be updated before a the second round of revisions. Do not overwrite the original model files. Instead ask the user for a path to be use to integrate the updates if they did not provided one.

@@ -2,12 +2,19 @@ Migrate functions in biolog/plots and biolog/biolog to labutils
 Rework fit gompertz function
 Pool all glucoses together (alpha, beta, d-glucose)?
 
-Review charge balance of reaction CAMP6AHDH
-
-wtf: DDSMSTOLD AIRth ASNtx SGOR
+Review charge balance of reaction:
+	DDSMSTOLD AIRth ASNtx SGOR CAMP6AHDH
 
 ocdccoa == stcoa
+ocdce9a == ocdcea
+hso3 is to be replaced by so3
+2am6sa_c to be replaced by L2aadp6sa
+metabolite 3hib to be replaced by 3hmp. 
+HDS to be replaced by HMBDPO_h RXN0-882 MNXR196166
+CYEUOLS stoichiometry looks wrong. represents 3 reactions in phytosterol biosynthesis (plants): RXN-19720, RXN-11928, RXN-11929
 
+review reactions in Biosynthesis of steroids
+review g1p metabolite (pool to g1pA, g1pB)
 review photorespiration
 review superpathway of purines degradation in plants
 review selenoaminoacids metabolism
@@ -22,3 +29,5 @@ Some reactions are in bigg but the compartment does not match
 Some reactions ids and the stoichiometries dont match
 Some reactions from the chlamydomonas model are only on that model, these
   can be updated to metacyc reactions?
+Some metabolites from the chlamydomonas model are only on that model, update to other bigg metabolites
+Flag metabolite and reaction ids only in chlamydomonas

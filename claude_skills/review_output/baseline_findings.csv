@@ -1,0 +1,422 @@
+id,error_tag,confidence,rationale,proposed_fix
+glc_D_B_c,deprecated_metanetx_id,high,MNXM1105026 is deprecated in MetaNetX 4.5,"replace with one of MNXM1364060,MNXM1364061,MNXM1364062"
+gal1p_L_c,deprecated_metanetx_id,high,MNXM1106067 is deprecated in MetaNetX 4.5,"replace with one of MNXM1364212,MNXM1364213,MNXM1364214"
+campstnl_c,deprecated_metanetx_id,high,MNXM736368 is deprecated in MetaNetX 4.5,"replace with one of MNXM1371753,MNXM1371754"
+protdt_h,deprecated_metanetx_id,high,MNXM1222 is deprecated in MetaNetX 4.5,"replace with one of MNXM727373,MNXM727374,MNXM727375"
+menlphnl_c,deprecated_metanetx_id,high,MNXM731614 is deprecated in MetaNetX 4.5,"replace with one of MNXM1371336,MNXM1371337"
+protds_h,deprecated_metanetx_id,high,MNXM1221 is deprecated in MetaNetX 4.5,"replace with one of MNXM727363,MNXM727364,MNXM727365"
+glc_D_B_h,deprecated_metanetx_id,high,MNXM1105026 is deprecated in MetaNetX 4.5,"replace with one of MNXM1364060,MNXM1364061,MNXM1364062"
+5mtr_c,deprecated_metanetx_id,high,MNXM1592 is deprecated in MetaNetX 4.5,"replace with one of MNXM729971,MNXM729972"
+dtct_h,deprecated_metanetx_id,high,MNXM48991 is deprecated in MetaNetX 4.5,"replace with one of MNXM1369785,MNXM1369786"
+pdme1801829z12z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pchol1819z1845z9z12z15z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pdme1819z1835z9z12z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pdme1829z12z1835z9z12z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pdme1801819z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pme1819z1845z9z12z15z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pdme1819z1819z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pdme18111z1819z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+apop_h,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pchol18111z1845z9z12z15z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pchol1829z12z1835z9z12z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pme18111z1845z9z12z15z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+Asn_X_Ser_FSLASH_Thr_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pme1819z1819z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pchol1801835z9z12z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pme1819z1829z12z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pme1829z12z1835z9z12z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pdme18111z1845z9z12z15z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pme18111z1835z9z12z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pme1801835z9z12z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pdme1819z1829z12z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pme18111z1819z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pme1819z1835z9z12z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pme1801819z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pdme1801845z9z12z15z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pme18111z1829z12z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pdme1801835z9z12z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pchol18111z1835z9z12z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pdme1819z1845z9z12z15z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pdme18111z1835z9z12z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pme1801829z12z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pchol1801845z9z12z15z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pme1801845z9z12z15z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+pdme18111z1829z12z_c,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+hmcit_L_m,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+2oglut_m,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+2oglutm_h,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+2oglut_h,missing_metanetx_id,high,no metanetx.chemical annotation,map via InChIKey/name
+ocdccoa_c,duplicate_metabolite_same_mnxm,medium,shares metanetx.chemical=MNXM1104352 with ['stcoa_c'] in compartment c,merge or re-annotate
+stcoa_c,duplicate_metabolite_same_mnxm,medium,shares metanetx.chemical=MNXM1104352 with ['ocdccoa_c'] in compartment c,merge or re-annotate
+tag1601819Z1819Z_c,duplicate_metabolite_same_mnxm,medium,shares metanetx.chemical=MNXM728552 with ['tag1819Z1819Z160_c'] in compartment c,merge or re-annotate
+tag1819Z1819Z160_c,duplicate_metabolite_same_mnxm,medium,shares metanetx.chemical=MNXM728552 with ['tag1601819Z1819Z_c'] in compartment c,merge or re-annotate
+tag1601819Z18111Z_c,duplicate_metabolite_same_mnxm,medium,shares metanetx.chemical=MNXM728754 with ['tag18111Z1819Z160_c'] in compartment c,merge or re-annotate
+tag18111Z1819Z160_c,duplicate_metabolite_same_mnxm,medium,shares metanetx.chemical=MNXM728754 with ['tag1601819Z18111Z_c'] in compartment c,merge or re-annotate
+ocdcea_c,duplicate_metabolite_same_mnxm,medium,shares metanetx.chemical=MNXM1364393 with ['ocdce9a_c'] in compartment c,merge or re-annotate
+ocdce9a_c,duplicate_metabolite_same_mnxm,medium,shares metanetx.chemical=MNXM1364393 with ['ocdcea_c'] in compartment c,merge or re-annotate
+tag1819Z1819Z180_c,duplicate_metabolite_same_mnxm,medium,shares metanetx.chemical=MNXM730413 with ['tag1801819Z1819Z_c'] in compartment c,merge or re-annotate
+tag1801819Z1819Z_c,duplicate_metabolite_same_mnxm,medium,shares metanetx.chemical=MNXM730413 with ['tag1819Z1819Z180_c'] in compartment c,merge or re-annotate
+tag1819Z18111Z18111Z_c,duplicate_metabolite_same_mnxm,medium,shares metanetx.chemical=MNXM728162 with ['tag18111Z18111Z1819Z_c'] in compartment c,merge or re-annotate
+tag18111Z18111Z1819Z_c,duplicate_metabolite_same_mnxm,medium,shares metanetx.chemical=MNXM728162 with ['tag1819Z18111Z18111Z_c'] in compartment c,merge or re-annotate
+metarhodopsin_h,duplicate_metabolite_same_mnxm,medium,"shares metanetx.chemical=MNXM735298 with ['lumirhodopsin_h', 'bathorhodopsin_h'] in compartment h",merge or re-annotate
+lumirhodopsin_h,duplicate_metabolite_same_mnxm,medium,"shares metanetx.chemical=MNXM735298 with ['metarhodopsin_h', 'bathorhodopsin_h'] in compartment h",merge or re-annotate
+bathorhodopsin_h,duplicate_metabolite_same_mnxm,medium,"shares metanetx.chemical=MNXM735298 with ['metarhodopsin_h', 'lumirhodopsin_h'] in compartment h",merge or re-annotate
+tag1819Z1819Z18111Z_c,duplicate_metabolite_same_mnxm,medium,shares metanetx.chemical=MNXM728168 with ['tag18111Z1819Z1819Z_c'] in compartment c,merge or re-annotate
+tag18111Z1819Z1819Z_c,duplicate_metabolite_same_mnxm,medium,shares metanetx.chemical=MNXM728168 with ['tag1819Z1819Z18111Z_c'] in compartment c,merge or re-annotate
+ocdce9a_h,duplicate_metabolite_same_mnxm,medium,shares metanetx.chemical=MNXM1364393 with ['ocdcea_h'] in compartment h,merge or re-annotate
+ocdcea_h,duplicate_metabolite_same_mnxm,medium,shares metanetx.chemical=MNXM1364393 with ['ocdce9a_h'] in compartment h,merge or re-annotate
+hisocit_m,duplicate_metabolite_same_mnxm,medium,shares metanetx.chemical=MNXM984 with ['hicit_m'] in compartment m,merge or re-annotate
+hicit_m,duplicate_metabolite_same_mnxm,medium,shares metanetx.chemical=MNXM984 with ['hisocit_m'] in compartment m,merge or re-annotate
+tag16018111Z18111Z_c,duplicate_metabolite_same_mnxm,medium,shares metanetx.chemical=MNXM728748 with ['tag18111Z18111Z160_c'] in compartment c,merge or re-annotate
+tag18111Z18111Z160_c,duplicate_metabolite_same_mnxm,medium,shares metanetx.chemical=MNXM728748 with ['tag16018111Z18111Z_c'] in compartment c,merge or re-annotate
+ocdccoa_c,duplicate_metabolite_same_inchikey,medium,shares inchikey=SIARJEKBADXQJG-LFZQUHGESA-J with ['stcoa_c'] in compartment c,merge or re-annotate
+stcoa_c,duplicate_metabolite_same_inchikey,medium,shares inchikey=SIARJEKBADXQJG-LFZQUHGESA-J with ['ocdccoa_c'] in compartment c,merge or re-annotate
+tag16018111Z18111Z_c,duplicate_metabolite_same_inchikey,medium,shares inchikey=NJWLXJXDVKOEOP-LJHRAKOHSA-N with ['tag18111Z18111Z160_c'] in compartment c,merge or re-annotate
+tag18111Z18111Z160_c,duplicate_metabolite_same_inchikey,medium,shares inchikey=NJWLXJXDVKOEOP-LJHRAKOHSA-N with ['tag16018111Z18111Z_c'] in compartment c,merge or re-annotate
+tag1819Z1819Z180_c,duplicate_metabolite_same_inchikey,medium,shares inchikey=RYNHWWNZNIGDAQ-WNMJAFDRSA-N with ['tag1801819Z1819Z_c'] in compartment c,merge or re-annotate
+tag1801819Z1819Z_c,duplicate_metabolite_same_inchikey,medium,shares inchikey=RYNHWWNZNIGDAQ-WNMJAFDRSA-N with ['tag1819Z1819Z180_c'] in compartment c,merge or re-annotate
+tag1601819Z1819Z_c,duplicate_metabolite_same_inchikey,medium,shares inchikey=JFISYPWOVQNHLS-HMOYFKASSA-N with ['tag1819Z1819Z160_c'] in compartment c,merge or re-annotate
+tag1819Z1819Z160_c,duplicate_metabolite_same_inchikey,medium,shares inchikey=JFISYPWOVQNHLS-HMOYFKASSA-N with ['tag1601819Z1819Z_c'] in compartment c,merge or re-annotate
+hisocit_m,duplicate_metabolite_same_inchikey,medium,shares inchikey=OEJZZCGRGVFWHK-WVZVXSGGSA-K with ['hicit_m'] in compartment m,merge or re-annotate
+hicit_m,duplicate_metabolite_same_inchikey,medium,shares inchikey=OEJZZCGRGVFWHK-WVZVXSGGSA-K with ['hisocit_m'] in compartment m,merge or re-annotate
+tag1819Z1819Z18111Z_c,duplicate_metabolite_same_inchikey,medium,shares inchikey=JOURDTSYZKYHFB-VPQNIYBTSA-N with ['tag18111Z1819Z1819Z_c'] in compartment c,merge or re-annotate
+tag18111Z1819Z1819Z_c,duplicate_metabolite_same_inchikey,medium,shares inchikey=JOURDTSYZKYHFB-VPQNIYBTSA-N with ['tag1819Z1819Z18111Z_c'] in compartment c,merge or re-annotate
+ocdce9a_h,duplicate_metabolite_same_inchikey,medium,shares inchikey=ZQPPMHVWECSIRJ-KTKRTIGZSA-M with ['ocdcea_h'] in compartment h,merge or re-annotate
+ocdcea_h,duplicate_metabolite_same_inchikey,medium,shares inchikey=ZQPPMHVWECSIRJ-KTKRTIGZSA-M with ['ocdce9a_h'] in compartment h,merge or re-annotate
+tag1819Z18111Z18111Z_c,duplicate_metabolite_same_inchikey,medium,shares inchikey=MIZFXTLHUPLNGP-OGZJHMPXSA-N with ['tag18111Z18111Z1819Z_c'] in compartment c,merge or re-annotate
+tag18111Z18111Z1819Z_c,duplicate_metabolite_same_inchikey,medium,shares inchikey=MIZFXTLHUPLNGP-OGZJHMPXSA-N with ['tag1819Z18111Z18111Z_c'] in compartment c,merge or re-annotate
+tag1601819Z18111Z_c,duplicate_metabolite_same_inchikey,medium,shares inchikey=QJRAIXUZRUZYSD-SHXCIMIZSA-N with ['tag18111Z1819Z160_c'] in compartment c,merge or re-annotate
+tag18111Z1819Z160_c,duplicate_metabolite_same_inchikey,medium,shares inchikey=QJRAIXUZRUZYSD-SHXCIMIZSA-N with ['tag1601819Z18111Z_c'] in compartment c,merge or re-annotate
+ocdcea_c,duplicate_metabolite_same_inchikey,medium,shares inchikey=ZQPPMHVWECSIRJ-KTKRTIGZSA-M with ['ocdce9a_c'] in compartment c,merge or re-annotate
+ocdce9a_c,duplicate_metabolite_same_inchikey,medium,shares inchikey=ZQPPMHVWECSIRJ-KTKRTIGZSA-M with ['ocdcea_c'] in compartment c,merge or re-annotate
+pe1819Z1829Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+sqdg18111Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts1839Z12Z15Z1835Z9Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pdme1801829z12z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+sqdg1839Z12Z15Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mppp9me_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pg18111Z1613E_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgdg1819Z1634Z7Z10Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pe1819Z1829Z12Z_e,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mgdg1829Z12Z1634Z7Z10Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts1829Z12Z1835Z9Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pg18111Z160_e,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pchol1819z1845z9z12z15z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pgp18111Z160_e,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+12dgr18111z18111z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+sqdg18111Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pdme1819z1835z9z12z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pe1819Z1845Z9Z12Z15Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgdg1839Z12Z15Z1637Z10Z13Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag18111Z1819Z180_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound",fill from MetaNetX
+pa1819Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+2m6sbenzq_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pqh2_u,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgdg1839Z12Z15Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgdg1829Z12Z1634Z7Z10Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag1819Z18111Z1845Z9Z12Z15Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pdme1829z12z1835z9z12z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pdme1801819z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pe1819Z1845Z9Z12Z15Z_e,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pcox_u,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag18111Z1819Z1835Z9Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts1829Z12Z1829Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pe1801835Z9Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pg18111Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag18111Z1819Z1845Z9Z12Z15Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+photon438_u,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mgdg1829Z12Z1619Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+photon490_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pg1829Z12Z1613E_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgdg1819Z1637Z10Z13Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+1agpe1829Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+glc_D_B_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mgdg1819Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dvpchlda_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+asqdca1819Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+photon450_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+asqdca1839Z12Z15Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+lipacp_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa18111Z1819Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa1801819Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+cdp12dgr18111Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+1agpe18111Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+arso4_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pgp1819Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag1819Z18111Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound",fill from MetaNetX
+ocdcaACP_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag1819Z1819Z1819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pme1819z1845z9z12z15z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+hdeACP_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+asnglcnacglcnacman_man_man_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag1601819Z18111Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound",fill from MetaNetX
+pn6ll_h,missing_annotations,low,"missing chebi,metacyc.compound,inchikey",fill from MetaNetX
+pgp1819Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgdg1819Z1619Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pchlda_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag1601819Z1845Z9Z12Z15Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+photon437_u,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+1odec9eg3p_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pdme1819z1819z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mgdg1829Z12Z1644Z7Z10Z13Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+npdp_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+photon680_u,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag1819Z1819Z1845Z9Z12Z15Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pdme18111z1819z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pail1819Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+apop_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pe1801845Z9Z12Z15Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pe18111Z1835Z9Z12Z_e,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa1819Z1619Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pail1819Z160_e,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pe1829Z12Z1835Z9Z12Z_e,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+1agpe1819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+etfrd_m,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+gdpgal_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pchol18111z1845z9z12z15z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+cbtnCCP_h,missing_annotations,low,"missing chebi,metacyc.compound,inchikey",fill from MetaNetX
+hpot13_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pchol1829z12z1835z9z12z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+sqdg1819Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa18111Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+cdp12dgr1819Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgdg1829Z12Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pcrd_u,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgdg1839Z12Z15Z1634Z7Z10Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pe1801829Z12Z_e,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+o2D_u,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag16018111Z1835Z9Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+cacoa_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pail18111Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pme18111z1845z9z12z15z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+photonVis_e,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pe1801819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+Asn_X_Ser_FSLASH_Thr_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pme1819z1819z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pchol1801835z9z12z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+asqdpa1829Z12Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+gal1p_L_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+sqdg1819Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+starch300_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag1801819Z1835Z9Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+asqdpa18111Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag18111Z18111Z1845Z9Z12Z15Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pg1819Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts1829Z12Z1845Z9Z12Z15Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag1801819Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound",fill from MetaNetX
+sqdg160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mgdg1829Z12Z1627Z10Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag16018111Z18111Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound",fill from MetaNetX
+2c4mthzep_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pme1819z1829z12z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pme1829z12z1835z9z12z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+asqdca18111Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa1601819Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa18111Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pq_u,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+12dgr1819Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mgdg1839Z12Z15Z1627Z10Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts1829Z12Z18111Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+btnCCP_h,missing_annotations,low,"missing chebi,metacyc.compound,inchikey",fill from MetaNetX
+pe1801835Z9Z12Z_e,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+ocACP_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mgdg1829Z12Z1617Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgdg1819Z1617Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+campstnl_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pdme18111z1845z9z12z15z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag1819Z18111Z1835Z9Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgdg1829Z12Z1617Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pme18111z1835z9z12z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pg1829Z12Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mgdg1819Z1637Z10Z13Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mgdg1829Z12Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+asqdpa1839Z12Z15Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag1801819Z1845Z9Z12Z15Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts1819Z1829Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgdg1829Z12Z1637Z10Z13Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag18111Z18111Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound",fill from MetaNetX
+12dgr1819Z1619Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pme1801835z9z12z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pdme1819z1829z12z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pme18111z1819z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pme1819z1835z9z12z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+cdp12dgr1819Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag1801819Z180_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound",fill from MetaNetX
+pme1801819z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+photon298_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pdme1801845z9z12z15z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+sqdg1829Z12Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pme18111z1829z12z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pe1801829Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+12dgr18111Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgdg1829Z12Z1619Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mgdg1829Z12Z1637Z10Z13Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+photon673_u,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mgdg1819Z1619Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mgdg1839Z12Z15Z1637Z10Z13Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pdme1801835z9z12z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pg1819Z1613E_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag16018111Z1819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound",fill from MetaNetX
+cdp12dgr18111Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pe1801845Z9Z12Z15Z_e,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pail18111Z160_e,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pe1819Z1835Z9Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts1829Z12Z1819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pacoa_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts1819Z1835Z9Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pgp18111Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pe18111Z1829Z12Z_e,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound",fill from MetaNetX
+pchol18111z1835z9z12z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pgp18111Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa1819Z1819Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa1819Z18111Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pdme1819z1845z9z12z15z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pdme18111z1835z9z12z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts1819Z1845Z9Z12Z15Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pe18111Z1845Z9Z12Z15Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pchol1819z1829z12z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pme1801829z12z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mgdg1819Z1627Z10Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts1839Z12Z15Z1819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pg1839Z12Z15Z1613E_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa1819Z1619Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pchol1801845z9z12z15z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pe1819Z1835Z9Z12Z_e,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+photon646_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+etfox_m,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pe1801819Z_e,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa18111z18111z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgdg1829Z12Z1627Z10Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+1odec11eg3p_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound",fill from MetaNetX
+pe1829Z12Z1835Z9Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pg1819Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pgp1819Z160_e,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag18111Z18111Z1835Z9Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+asqdpa1819Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mgdg1839Z12Z15Z1644Z7Z10Z13Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mgdg1839Z12Z15Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+octeACP_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+asqdca1829Z12Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pg1819Z160_e,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag16018111Z1845Z9Z12Z15Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag1601819Z1835Z9Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pe18111Z1835Z9Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgdg1819Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pe18111Z1829Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound",fill from MetaNetX
+pme1801845z9z12z15z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa1819Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+menlphnl_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pg18111Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgdg1839Z12Z15Z1627Z10Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag1819Z1819Z1835Z9Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts1839Z12Z15Z1845Z9Z12Z15Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+octe9ACP_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mgdg1839Z12Z15Z1634Z7Z10Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pg1839Z12Z15Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pe18111Z1845Z9Z12Z15Z_e,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgdg1819Z1627Z10Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts1839Z12Z15Z18111Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mgdg1819Z1617Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pdme18111z1829z12z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tag18111Z1819Z160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound",fill from MetaNetX
+12dgr18111Z1819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+12dgr1601819Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+12dgr1819Z1819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa1801819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa18111Z18111Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+12dgr18111Z18111Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mag1819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+12dgr16018111Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+sertrna_c,missing_annotations,low,"missing chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts18111Z1829Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts18111Z1835Z9Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+3ooctdACP_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+1odec9eg3p_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa1819Z1819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dghs1601819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts1601819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+glc_D_B_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa1601819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts1819Z18111Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa18111Z1819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+1odec11eg3p_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound",fill from MetaNetX
+12dgr18111Z1819Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+alatrna_m,missing_annotations,low,"missing kegg.compound,metacyc.compound,inchikey",fill from MetaNetX
+dgts18111Z1819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dcaACP_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+12dgr1819Z18111Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+12dgr1601819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mag18111Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+12dgr1819Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa1829Z12Z1835Z9Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+12dgr1801819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dghs1819Z18111Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+12dgr18111Z160_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dghs18111Z18111Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa1819Z1845Z9Z12Z15Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+but2eACP_h,missing_annotations,low,"missing chebi,metacyc.compound,inchikey",fill from MetaNetX
+butACP_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tfenfe3_h,missing_annotations,low,"missing chebi,metacyc.compound,inchikey",fill from MetaNetX
+tfenfe2_h,missing_annotations,low,"missing chebi,metacyc.compound,inchikey",fill from MetaNetX
+whlnlc_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mag180_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+12dgr1801819Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa1819Z18111Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+3ocvac11eACP_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+ca_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa16018111Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dghs18111Z1819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+12dgr1819Z18111Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+whodce9a_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts1819Z1819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pqh2_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pq_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+3kpacpme_h,missing_annotations,low,"missing chebi,metacyc.compound,inchikey",fill from MetaNetX
+ddcaACP_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dghs16018111Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts16018111Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+t3c11vaceACP_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts1601829Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts1601835Z9Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+malacpme_h,missing_annotations,low,"missing chebi,metacyc.compound,inchikey",fill from MetaNetX
+gal14lac_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+12dgr1819Z1619Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dhepstrl_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mag160_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mettrna_c,missing_annotations,low,"missing chebi,metacyc.compound,inchikey",fill from MetaNetX
+dghs1819Z1819Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+12dgr1819Z1819Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+tyr_Lso4_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+mgdg1819Z1644Z7Z10Z13Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+phytfl_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+ggchldb_u,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa16018111Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+12dgr16018111Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+sectrna_m,missing_annotations,low,"missing chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa1801845Z9Z12Z15Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+3hoctaACP_h,missing_annotations,low,"missing chebi,metacyc.compound,inchikey",fill from MetaNetX
+3kgacpme_h,missing_annotations,low,"missing chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgdg1839Z12Z15Z1644Z7Z10Z13Z_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+cystine__L_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+3hcvac11eACP_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa18111Z1835Z9Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa1801829Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+3hpalmACP_h,missing_annotations,low,"missing chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa18111Z1829Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+trnasecys_m,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+asptrna_m,missing_annotations,low,"missing chebi,metacyc.compound,inchikey",fill from MetaNetX
+ppad_m,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa1819Z1835Z9Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa1801835Z9Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dtct_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa18111Z1845Z9Z12Z15Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts18111Z18111Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+pa1819Z1829Z12Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+seahcys_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound",fill from MetaNetX
+dgts18111Z1845Z9Z12Z15Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+dgts1601845Z9Z12Z15Z_c,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+hmcit_L_m,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+2oglut_m,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+2oglutm_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX
+2oglut_h,missing_annotations,low,"missing kegg.compound,chebi,metacyc.compound,inchikey",fill from MetaNetX

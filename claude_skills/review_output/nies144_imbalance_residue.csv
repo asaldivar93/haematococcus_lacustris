@@ -1,0 +1,534 @@
+reaction,name,imbalance,classes,has_placeholder,localised_metabolites
+PRISM_solar_litho,spectral decomposition of solar light measured from Earth's surface,{'Z': -0.04986},Z,true,""
+PRISM_solar_exo,spectral decomposition of solar light measured from outer space,{'Z': 0.01248},Z,true,""
+PRISM_incandescent_60W,spectral decomposition of 60W incandescent light bulb,{'Z': -0.385049},Z,true,""
+PRISM_fluorescent_warm_18W,spectral decomposition of 18W warm white fluorescent light bulb,{'Z': -0.098394},Z,true,""
+PRISM_fluorescent_cool_215W,spectral decomposition of 215W cool white fluorescent light bulb,{'Z': -0.275329},Z,true,""
+PRISM_metal_halide,spectral decomposition of metal halide lamp,{'Z': -0.229874},Z,true,""
+PRISM_high_pressure_sodium,spectral decomposition of high pressure sodium lamp,{'Z': -0.518037},Z,true,""
+PRISM_growth_room,spectral decomposition of growth room,{'Z': -0.305339},Z,true,""
+PRISM_white_LED,spectral decomposition of white LED,{'Z': -0.365097},Z,true,""
+PRISM_red_LED_array_653nm,spectral decomposition of red LED array (653nm),{'Z': 0.34011},Z,true,""
+PRISM_red_LED_674nm,spectral decomposition of red LED (674nm),{'Z': 0.651196},Z,true,""
+PRISM_design_growth,spectral decomposition of an optimized LED for growth,{'Z': 0.592759},Z,true,""
+PS_asn__L_c,incorporation of asn-L residue into a protein,"{'C': 1.0, 'H': 1.0, 'N': 1.0, 'O': 1.0, 'R': 2.0}","C,H,N,O,R",true,""
+CY_focytc_h,"ferrocytochrome c recycle, chloroplast","{'C': -18.0, 'H': -40.0, 'N': -8.0, 'O': -4.0, 'S': -4.0, 'charge': 4.0}","C,H,N,O,S,charge",false,""
+BIOMASS_hlacus_auto,Biomass (autotrophic),"{'C': -38.584422, 'H': -62.792218, 'charge': 0.158467, 'N': -0.336822, 'O': -29.002596, 'S': -0.01775, 'P': -0.12565, 'Mg': -0.003308}","C,H,Mg,N,O,P,S,charge",false,""
+BIOMASS_hlacus_mixo,Biomass (mixotrophic),"{'C': -39.025537, 'H': -63.171729, 'charge': 0.213143, 'N': -0.437491, 'O': -28.469835, 'S': -0.019121, 'P': -0.170176, 'Mg': -0.003723}","C,H,Mg,N,O,P,S,charge",true,""
+BIOMASS_hlacus_hetero,Biomass (heterotrophic),"{'C': -39.048901, 'H': -63.192018, 'charge': 0.212929, 'N': -0.441618, 'O': -28.446044, 'S': -0.019102, 'P': -0.170006, 'Mg': -0.00486}","C,H,Mg,N,O,P,S,charge",true,""
+AIRth,"AIR transport, chloroplast","{'H': 1.0, 'charge': 1.0}","H,charge",false,air_c
+PPIth,PPI chloroplast transport,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+UDPth,"UDP transport viafacilitated diffusion, chloroplast","{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+UMPth,"UMP transport viafacilitated diffusion, chloroplast","{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+METHFtx,"5,10-Methenyltetrahydrofolate uptake carrier, glyoxysome","{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+DHORStm,"(S)-Dihydroorotate transport viafacilitated diffusion, mitochondria","{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+GMPtm,"GMP transport, mitochondria","{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+ARGT,arginine---tRNA ligase,"{'C': -18.0, 'H': -22.0, 'N': -6.0, 'O': -18.0, 'charge': 3.0, 'P': -3.0}","C,H,N,O,P,charge",true,""
+ARGSS,argininosuccinate synthase,"{'H': 2.0, 'charge': 2.0}","H,charge",false,""
+OCT,ornithine carbamoyltransferase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+OCTh,"ornithine carbamoyltransferase, chloroplast","{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+OCTm,"ornithine carbamoyltransferase, mitochondrial","{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+PPCOAOm,"Propanoyl-CoA:(acceptor) 2,3-oxidoreductase","{'H': -2.0, 'charge': -2.0}","H,charge",false,""
+CMS,2-C-methyl-D-erythritol 4-phosphate cytidylyltransferase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+CYEUOLS,cycloeucalenol synthase,{'charge': -2.0},charge,false,""
+DDSMSTOLD,7-dehydrodesmosterol desaturase,"{'H': -2.0, 'charge': -2.0}","H,charge",false,""
+DSMSTOLD,desmosterol desaturase,"{'H': 2.0, 'charge': 2.0}","H,charge",false,""
+FPPSh,"farnesyl pyrophosphate synthase, chloroplast","{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+GGPS,geranylgeranyl diphosphate synthase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+GPPSh,"geranyl pyrophosphate synthase, chloroplast","{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+HPT,homogentisate phytyltransferase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+VITD3S,"vitamin D3 synthesis (non-enzymatic, UV-light requiring)",{'Z': -1.0},Z,true,""
+PSY,phytoene synthase,"{'H': 2.0, 'charge': 2.0}","H,charge",false,""
+ETF,electron transfer flavoprotein,"{'charge': 2.0, 'H': 2.0}","H,charge",true,""
+3SPYRSPh,"3-sulfinopyruvate hydrolase (spontaneous), chloroplast","{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+3SPYRSPm,"3-sulfinopyruvate hydrolase (spontaneous), mitochondria","{'H': -1.0, 'charge': -1.0}","H,charge",false,hso3_m
+CYSTL,cysteine---tRNA ligase,"{'C': -18.0, 'H': -23.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 2.0}","C,H,N,O,P,charge",true,""
+CITALALDOR,citalopram aldehyde:oxygen oxidoreductase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+CITALOR,citalopram:oxygen oxidoreductase (deaminating),"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+DDMCITALOR,didemethylcitalopram:oxygen oxidoreductase (deaminating),"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+LIDOAMH,lidocaine amidohydrolase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,26dmani_e
+MEGLYXYLAMH,monoethylglycinexylidide amidohydrolase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,26dmani_e
+BTNC,biotin carboxylase,"{'H': -1.0, 'charge': -1.0}","H,charge",true,""
+AKP1,"2-Amino-4-hydroxy-6-(erythro-1,2,3-trihydroxypropyl) dihydropteridine triphosphate phosphohydrolase (alkaline optimum)","{'H': -1.0, 'charge': -1.0}","H,charge",false,ahdt_c
+GTHAMPORm,"AMP,sulfite:glutathione-disulfide oxidoreductase (adenosine-5'-phosphosulfate-forming), mitochondria","{'H': 1.0, 'charge': 1.0}","H,charge",false,hso3_m
+AGPAT1601819Zh,1-hexadecanoyl-sn-glycerol 3-phosphate O-acyltransferase ((9Z)-C18:1) (ACP substrate),"{'H': 3.0, 'charge': 2.0, 'R': -1.0, '*': 1.0}","*,H,R,charge",true,pa1601819Z_h
+AGPAT160h,1-hexadecanoyl-sn-glycerol 3-phosphate O-acyltransferase (n-C16:0) (ACP substrate),{'H': 3.0},H,true,""
+AGPAT1801819Zh,1-octadecanoyl-sn-glycerol 3-phosphate O-acyltransferase ((9Z)-C18:1) (ACP substrate),"{'H': 3.0, 'charge': 2.0, 'R': -1.0, '*': 1.0}","*,H,R,charge",true,pa1801819Z_h
+AGPAT18111Z160h,1-octadec-11-enoyl-sn-glycerol 3-phosphate O-acyltransferase (n-C16:0) (ACP substrate),"{'H': 3.0, 'charge': 2.0}","H,charge",true,""
+AGPAT18111Z1819Zh,1-octadec-11-enoyl-sn-glycerol 3-phosphate O-acyltransferase ((9Z)-C18:1) (ACP substrate),"{'H': 3.0, 'charge': 2.0, 'R': -1.0, '*': 1.0}","*,H,R,charge",true,pa18111Z1819Z_h
+AGPAT1819Z160h,1-octadec-9-enoyl-sn-glycerol 3-phosphateO-acyltransferase (n-C16:0) (ACP substrate),{'H': 3.0},H,true,""
+AGPAT1819Z1619Zh,1-octadec-9-enoyl-sn-glycerol 3-phosphateO-acyltransferase ((9Z)-C16:1) (ACP substrate),"{'C': -11.0, 'H': -17.0, 'O': -7.0, 'P': -1.0, 'charge': 1.0, 'N': -2.0}","C,H,N,O,P,charge",true,pa1819Z1619Z_h
+AGPAT1819Z18111Zh,1-octadec-9-enoyl-sn-glycerol 3-phosphateO-acyltransferase ((11Z)-C18:1) (ACP substrate),"{'C': -11.0, 'H': -17.0, 'O': -7.0, 'P': -1.0, 'charge': 1.0, 'N': -2.0}","C,H,N,O,P,charge",true,pa1819Z18111Z_h
+AGPAT1819Z1819Zh,1-octadec-9-enoyl-sn-glycerol 3-phosphateO-acyltransferase ((9Z)-C18:1) (ACP substrate),"{'H': 3.0, 'R': -1.0, '*': 1.0}","*,H,R",true,pa1819Z1819Z_h
+G3PAT160h,glycerol-3-phosphate acyltransferase (C16:0),{'H': 3.0},H,true,""
+G3PAT180h,glycerol-3-phosphate acyltransferase (C18:0),"{'C': -11.0, 'H': -17.0, 'O': -7.0, 'P': -1.0, 'charge': 1.0, 'N': -2.0}","C,H,N,O,P,charge",true,""
+G3PAT1819Zh,glycerol-3-phosphate acyltransferase ((9Z)-C18:1),"{'H': 3.0, 'charge': 2.0, 'R': -1.0, '*': 1.0}","*,H,R,charge",true,""
+G3PAT181h,glycerol-3-phosphate acyltransferase ((11Z)-C18:1),"{'C': -11.0, 'H': -17.0, 'O': -7.0, 'P': -1.0, 'charge': 1.0, 'N': -2.0}","C,H,N,O,P,charge",true,""
+SQDGATCA18111Z160,"sulfolipid 2'-O-acyltransferase (2'-18:3(5,9,12,15)/18:1(11Z)/16:0)",{'charge': -4.0},charge,false,cacoa_c
+SQDGATCA1819Z160,"sulfolipid 2'-O-acyltransferase (2'-18:4(5,9,12,15)/18:1(9Z)/16:0)",{'charge': -4.0},charge,false,cacoa_c
+SQDGATPA18111Z160,"sulfolipid 2'-O-acyltransferase (2'-18:3(5,9,12)/18:1(11Z)/16:0)",{'charge': -4.0},charge,false,""
+SQDGATPA1819Z160,"sulfolipid 2'-O-acyltransferase (2'-18:3(5,9,12)/18:1(9Z)/16:0)",{'charge': -4.0},charge,false,""
+PGD3TDS1829Z12Z1613E,"phosphatidylglycerol palmitate-delta3t-desaturase (18:2(9Z,12Z)/16:1(3E))",{'charge': -2.0},charge,true,""
+PGD3TDS1839Z12Z15Z1613E,"phosphatidylglycerol palmitate-delta3t-desaturase (18:3(9Z,12Z,15Z)/16:1(3E))",{'charge': -4.0},charge,true,""
+HDC,histidine decarboxylase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,hista_c
+PRADPh,"phosphoribosyl-ATP diphosphatase, chloroplast","{'H': 3.0, 'charge': 3.0}","H,charge",false,""
+AMITKP,"ATP:1D-myo-Inositol 1,4,5,6-tetrakisphosphate phosphotransferase","{'H': -2.0, 'charge': -2.0}","H,charge",false,mi13456p_c
+ITKK,inositol-tetrakisphosphate 5-kinase,"{'H': -2.0, 'charge': -2.0}","H,charge",false,mi13456p_c
+COORr,carbon-monoxide:acceptor oxidoreductase,"{'charge': -2.0, 'H': -2.0}","H,charge",false,""
+ACRS,acireductone synthase,"{'H': 3.0, 'charge': 3.0}","H,charge",false,""
+ACRSP,"acireductone synthase, phosphate forming","{'H': -2.0, 'charge': -2.0}","H,charge",false,""
+DNGALh,"deamido-NAD+:L-glutamine amido-ligase (AMP-forming), chloroplast","{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+NAPT,nicotinamide phosphoribosyltransferase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+OGMG,4-oxoglutaramate generation (non-enzymatic),"{'H': -1.0, 'charge': -3.0}","H,charge",false,""
+URCN,urocanase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+CYOO6m,cytochrome c oxidase Complex IV,"{'C': 36.0, 'H': 80.0, 'N': 16.0, 'O': 8.0, 'charge': -8.0, 'S': 8.0}","C,H,N,O,S,charge",false,"ficytc_m,focytc_m"
+PHETL,phenylalanine---tRNA ligase,"{'C': -18.0, 'H': -22.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 3.0}","C,H,N,O,P,charge",true,""
+CEF,Cyclic Electron Flow,{'charge': 1.0},charge,true,""
+PSIblue,photosystem I (blue light-activated),"{'charge': -1.0, 'Z': -2.0}","Z,charge",true,""
+PSIIblue,photosystem II (blue light-activated),{'Z': -4.0},Z,true,""
+PSIred,photosystem I (red light-activated),"{'charge': -1.0, 'Z': -2.0}","Z,charge",true,""
+PSIIred,photosystem II (red light-activated),{'Z': -4.0},Z,true,""
+GLUTRR,glutamyl-tRNA reductase,"{'C': 18.0, 'H': 22.0, 'N': 6.0, 'O': 18.0, 'charge': -3.0, 'P': 3.0}","C,H,N,O,P,charge",true,""
+PHPHBDDMC,pheophorbide demethoxycarbonylase,{'charge': -2.0},charge,false,""
+OCDOR,3-oxopropionyl-CoA:NAD+ oxidoreductase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,malcoa_c
+ADSL1r,"N6-(1,2-dicarboxyethyl)AMP AMP-lyase (fumarate-forming)","{'H': -4.0, 'charge': -4.0}","H,charge",false,dcamp_c
+AGPOPm,"dGTP:pyruvate 2-O-phosphotransferase, mitochondria","{'H': -1.0, 'charge': -1.0}","H,charge",false,"dgdp_m,dgtp_m"
+ATAH,allantoate amidinohydrolase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+ATS,allantoin synthetase,"{'H': 2.0, 'charge': 2.0}","H,charge",false,""
+GMP5N,GMP-5'-nucleotidase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+GTPOPm,"GTP:pyruvate 2-O-phosphotransferase, mitochondria","{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+PRAIC,"phosphoribosylaminoimidazole carboxylase, cytosol","{'H': 1.0, 'charge': 1.0}","H,charge",false,"5aizc_c,air_c"
+ACHMSSELCYSL,"O-Acetylhomoserine succinate-lyase (adding cysteine), cytosol","{'H': -1.0, 'charge': -1.0}","H,charge",false,selcyst_c
+ACSERLh,"O3-Acetyl-L-serine acetate-lyase (adding hydrogen sulfide), chloroplast","{'H': 3.0, 'charge': 3.0}","H,charge",false,""
+ACSERLm,"O3-Acetyl-L-serine acetate-lyase (adding hydrogen sulfide), mitochondria","{'H': 3.0, 'charge': 3.0}","H,charge",false,""
+PHOMSELCYSL,"O-Phosphorylhomoserine succinate-lyase (adding cysteine), cytosol","{'H': -1.0, 'charge': -1.0}","H,charge",false,selcyst_c
+SUCHMSSELCYSL,"O-Succinyl-L-homoserine succinate-lyase (adding cysteine), cytosol","{'H': -1.0, 'charge': -1.0}","H,charge",false,selcyst_c
+TSULe,"Thiosulfate formation, spontaneous","{'charge': 2.0, 'H': 2.0}","H,charge",false,""
+SUCLm,succinyl-CoA ligase (ADP-forming),"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+34HPPYRI,3-(4-Hydroxyphenyl)pyruvate keto-enol-isomerase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+ccoaaCv,succinyl-CoA:acetoacetate CoA-transferase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+acaCv,N-acetyl-L-citrulline amidohydrolase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+argCv,L-Arginine amidinohydrolase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+uahCv,Urea amidohydrolase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+dagk18111z160Cv,diacylglycerol kinase (18:1(11z)/16:0),{'charge': 2.0},charge,false,"12dgr18111Z160_c,pa18111Z160_c"
+dagk1819z160Cv,diacylglycerol kinase (18:1(9z)/16:0),{'charge': 2.0},charge,false,12dgr1819Z160_c
+dagk1819z1619zCv,diacylglycerol kinase (18:1(9z)/16:1(9z)),{'charge': 2.0},charge,false,"12dgr1819Z1619Z_c,pa1819Z1619Z_c"
+dagk181hCv,"diacylglycerol kinase (18:1(11z)/18:1(11z)), chloroplast",{'charge': 2.0},charge,false,"12dgr18111z18111z_h,pa18111z18111z_h"
+TTSh,thiamine thiazole synthase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+CMTEPSh,2-(2-carboxy-4-methylthiazol-5-yl)ethyl phosphate synthase,"{'H': 1.0, 'charge': 3.0}","H,charge",false,""
+PACPHh,pimeloyl-[acyl-carrier protein]-methyl-ester hydrolase,"{'R': -1.0, '*': 1.0}","*,R",true,""
+BACCLh,biotin-[acetyl-CoA-carboxylase] ligase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+BTNPLh,holocarboxylase synthestase (biotin protein ligase),"{'C': 6.0, 'H': 13.0, 'N': 2.0, 'O': 1.0, 'charge': 1.0}","C,H,N,O,charge",true,""
+LIPOTh,lipoyl(octanoyl) transferase (protein N6-octanoyltransferase),"{'H': 3.0, 'R': -2.0, '*': 2.0}","*,H,R",true,""
+LIPOT2,lipoyl(octanoyl) transferase (protein N6-lipoyltransferase),"{'C': -11.0, 'H': -17.0, 'N': -2.0, 'O': -7.0, 'P': -1.0, '*': 1.0, 'charge': 1.0, 'R': -1.0}","*,C,H,N,O,P,R,charge",true,""
+HST_h,homogentisate solanesyltransferase,"{'H': 1.0, 'charge': -2.0}","H,charge",false,""
+HGGTh,homogentisate geranylgeranyltransferase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+RHODOPSINI,"rhodopsin photoisomerase (spontaneous, light-requiring)","{'C': -6.0, 'H': -10.0, 'N': -2.0, 'O': -2.0, '*': -1.0, 'Z': -1.6}","*,C,H,N,O,Z",true,""
+HPOTHL,"(9Z,11E,15Z)-(13S)-hydroperoxyoctadeca-9,11,15-trienoate 12,13-hydro-lyase",{'charge': -1.0},charge,false,""
+IJASA7S,(+)-7-isojasmonic acid synthesis,"{'H': -5.0, 'charge': -5.0}","H,charge",false,""
+ACOADAGAT18111Z1819Z1845Z9Z12Z15Z,"acyl-CoA: diacylglycerol acyltransferase (18:4(5Z,9Z,12Z,15Z))",{'charge': -4.0},charge,false,cacoa_c
+HEMELh,heme c ligase (chloroplast),"{'*': -4.0, 'R': 4.0}","*,R",true,""
+PCHLD450OR,"protochlorophyllide oxidoreductase (light-dependent, 450 nm)",{'Z': -1.0},Z,true,""
+papa1819z1619zCv,phosphatidate phosphatase (18:1(9z)/16:1(9z)),{'charge': -2.0},charge,false,"12dgr1819Z1619Z_c,pa1819Z1619Z_c"
+GLYTL,glycine---tRNA ligase,"{'C': -18.0, 'H': -23.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 2.0}","C,H,N,O,P,charge",true,""
+PAPA1601819Zh,"phosphatidate phosphatase (16:0/18:1(9Z)), chloroplast",{'charge': -2.0},charge,false,"12dgr1601819Z_h,pa1601819Z_h"
+PLDAGAT1819Z1819Z1819Z2,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa1801819Z_c
+PAPA181,phosphatidate phosphatase (18:1(11Z)/18:1(11Z)),{'charge': -2.0},charge,false,pa18111Z18111Z_c
+1AGPEAT1801835Z9Z12Z,"1-acylglycerophosphoethanolamine O-acyltransferase (18:0/18:3(5Z,12Z,15Z))",{'charge': -4.0},charge,false,""
+PLDAGAT16018111Z1819Z2,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa1801819Z_c
+SERTL,serine---tRNA ligase,"{'C': -18.0, 'H': -23.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 2.0}","C,H,N,O,P,charge",true,""
+6TINS5MPOR,6-thioinosine 5'-monophosphate:NAD oxidoreductase,"{'H': 2.0, 'charge': 2.0}","H,charge",false,""
+3OAS180,3-oxoacyl-[acyl-carrier-protein] synthase (n-C18:0),"{'C': -3.0, 'N': -1.0, 'O': -1.0, '*': -1.0, 'charge': 1.0}","*,C,N,O,charge",true,""
+CITALMO,citalopram monooxygenase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+CYSS_trdrd,"cysteine synthase, thioredoxin","{'H': -1.0, 'charge': -1.0}","H,charge",true,""
+PLDAGAT18111Z1819Z1819Z1,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa1601819Z_c
+CHLASG,chlorophyll a synthase (geranylgeranyl),"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+PLDAGAT1819Z1819Z1819Z3,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa18111Z1819Z_c
+DAGK18111Z1819Zh,"diacylglycerol kinase (18:1(11Z)/18:1(9Z)), chloroplast",{'charge': 2.0},charge,false,"12dgr18111Z1819Z_h,pa18111Z1819Z_h"
+ALATL,alanine---tRNA ligase,"{'C': -18.0, 'H': -20.0, 'N': -6.0, 'O': -18.0, 'charge': 5.0, 'P': -3.0}","C,H,N,O,P,charge",true,""
+FA100ACPHi,fatty-acyl-ACP hydrolase (n-C10:0),"{'H': 3.0, 'R': -1.0, '*': 1.0}","*,H,R",true,""
+PLPSA21801835Z9Z12Z,"phospholipase A2 (18:0/18:3(5Z,12Z,15Z))",{'charge': 1.0},charge,false,""
+DHNAOT4h,"1,4-dihydroxy-2-naphthoate octaprenyltransferase","{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+PROTL,proline---tRNA ligase,"{'C': -18.0, 'H': -22.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 3.0}","C,H,N,O,P,charge",true,""
+ACOADAGAT1601819Z1845Z9Z12Z15Z,"acyl-CoA: diacylglycerol acyltransferase (18:4(5Z,9Z,12Z,15Z))",{'charge': -4.0},charge,false,cacoa_c
+AACPS1,long-chain-fatty-acid-[acyl-carrier-protein] ligase (14:0),"{'H': -2.0, 'charge': 1.0}","H,charge",true,""
+SULOm,"sulfite oxidase, mitochondria","{'H': 1.0, 'charge': 1.0}","H,charge",false,hso3_m
+SQDGS1819Z160,sulfolipid synthase (18:1(9Z)/16:0),{'charge': 1.0},charge,false,""
+1AGPEAT1801845Z9Z12Z15Z,"1-acylglycerophosphoethanolamine O-acyltransferase (18:0/18:4(5Z,9Z,12Z,15Z))",{'charge': -4.0},charge,false,cacoa_c
+AGPATCOA18111Z160,1-octadec-11-enoyl-sn-glycerol 3-phosphate O-acyltransferase (n-C16:0) (CoA substrate),{'charge': 2.0},charge,false,pa18111Z160_c
+URO,urate oxidase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,5hiu_m
+AMO,"amine oxidase, glyoxysomal","{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+TAGAH16018111Z1835Z9Z12Z,"triacylglycerol acylhydrolase (16:0/18:1(11Z)/18:3(5Z,9Z,12Z))",{'charge': 1.0},charge,false,""
+PLPSD1829Z12Z1835Z9Z12Z,"phospholipase D (18:2(9Z,12Z)/18:3(5Z,12Z,15Z))",{'charge': 2.0},charge,false,""
+PLDAGAT1801819Z1819Z3,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa18111Z1819Z_c
+DAGK18111Z160h,diacylglycerol kinase (18:1(11Z)/16:0),{'charge': 2.0},charge,false,""
+G3PAT1819Z,glycerol-3-phosphate: acyl-coa acyltransferase (18:1(9Z)),{'charge': 2.0},charge,false,""
+PLPSD1819Z1845Z9Z12Z15Z,"phospholipase D (18:1(9Z)/18:4(5Z,9Z,12Z,15Z))",{'charge': 2.0},charge,false,""
+CCP2m,"Cytochrome c peroxidase, mitochondrial","{'C': 18.0, 'H': 40.0, 'N': 8.0, 'O': 4.0, 'charge': -4.0, 'S': 4.0}","C,H,N,O,S,charge",false,"ficytc_m,focytc_m"
+FAH1829Z12Z,"fatty acid omega-hydroxylase (18:2(9Z,12Z))",{'charge': 1.0},charge,true,""
+APOFETNs,apoferritin Fe3-loading reaction (spontaneous),{'charge': -3.0},charge,true,""
+ACOADAGAT16018111Z1845Z9Z12Z15Z,"acyl-CoA: diacylglycerol acyltransferase (18:4(5Z,9Z,12Z,15Z))",{'charge': -4.0},charge,false,cacoa_c
+ACOADAGAT1819Z18111Z1845Z9Z12Z15Z,"acyl-CoA: diacylglycerol acyltransferase (18:4(5Z,9Z,12Z,15Z))",{'charge': -4.0},charge,false,cacoa_c
+GLUTRS,glutamyl-tRNA synthetase,"{'C': -18.0, 'H': -21.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 4.0}","C,H,N,O,P,charge",true,""
+DAGK1819Z160h,diacylglycerol kinase (18:1(9Z)/16:0),{'charge': 2.0},charge,false,""
+PAPA1801819Zh,"phosphatidate phosphatase (18:0/18:1(9Z)), chloroplast",{'charge': -2.0},charge,false,"12dgr1801819Z_h,pa1801819Z_h"
+PPBNGS,porphobilinogen synthase,"{'H': -2.0, 'charge': -2.0}","H,charge",false,5aop_h
+NONDPS2h,all-trans-nonaprenyl-diphosphate synthase (geranylgeranyl diphosphate),"{'H': 5.0, 'charge': 8.0}","H,charge",false,""
+MPMECY1,Mg-protoporphyrin IX monomethyl ester (oxidative) cyclase I,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+3OAS181,3-oxoacyl-[acyl-carrier-protein] synthase ((11Z)-n-C18:1),"{'C': -25.0, 'H': -40.0, 'N': -5.0, 'O': -15.0, 'P': -2.0, '*': -2.0, 'charge': 3.0, 'R': 1.0}","*,C,H,N,O,P,R,charge",true,""
+PLDAGAT18111Z18111Z1819Z3,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa18111Z1819Z_c
+PAPA16018111Z,phosphatidate phosphatase (16:0/18:1(11Z)),{'charge': -2.0},charge,false,pa16018111Z_c
+ACOADAGAT1601819Z1835Z9Z12Z,"acyl-CoA: diacylglycerol acyltransferase (18:3(5Z,9Z,12Z))",{'charge': -4.0},charge,false,""
+PAPA1819Z18111Zh,"phosphatidate phosphatase (18:1(9Z)/18:1(11Z)), chloroplast",{'charge': -2.0},charge,false,"12dgr1819Z18111Z_h,pa1819Z18111Z_h"
+FAH1819Z,fatty acid omega-hydroxylase (18:1(9Z)),{'charge': 1.0},charge,true,""
+PLDAGAT1819Z18111Z1601,phospholipid: diacylglycerol acyltransferase (16:0),{'charge': -2.0},charge,false,pa18111Z160_c
+NONDPSh,all-trans-nonaprenyl-diphosphate synthase (geranyl diphosphate),"{'H': 7.0, 'charge': 10.0}","H,charge",false,""
+PAPA1819Z160h,phosphatidate phosphatase (18:1(9Z)/16:0),{'charge': -2.0},charge,false,""
+OPC6COAOR,OPC-6:0 CoA:oxygen 2-oxidoreductase,"{'H': 2.0, 'charge': 2.0}","H,charge",false,""
+FA180ACPHi,fatty-acyl-ACP hydrolase (n-C18:0),"{'H': -17.0, 'O': -7.0, 'charge': 1.0, 'C': -11.0, 'N': -2.0, 'P': -1.0}","C,H,N,O,P,charge",true,""
+DAGK1601819Zh,"diacylglycerol kinase (16:0/18:1(9Z)), chloroplast",{'charge': 2.0},charge,false,"12dgr1601819Z_h,pa1601819Z_h"
+SLDK,"selenide, water dikinase","{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+OPC4COAOR,OPC-4:0 CoA:oxygen 2-oxidoreductase,"{'H': -2.0, 'charge': -2.0}","H,charge",false,""
+papa18111z160Cv,phosphatidate phosphatase (18:1(11z)/16:0),{'charge': -2.0},charge,false,"12dgr18111Z160_c,pa18111Z160_c"
+HPACPOh,3-hydroxypimeloyl-[acp]-methyl-ester:NADP+ oxidoreductase,"{'*': -1.0, 'R': 1.0}","*,R",true,""
+CMPA,N-carbamoylputrescine amidase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,Ncbmpts_m
+ACP1819ZD9DS,stearoyl-[acyl-carrier-protein] delta9-desaturase ((9Z)-n-C18:1),"{'*': -1.0, 'charge': 1.0, 'H': -20.0, 'O': -7.0, 'C': -11.0, 'N': -2.0, 'P': -1.0, 'R': 1.0}","*,C,H,N,O,P,R,charge",true,""
+ACOAD8m,isovaleryl-coa dehydrogenase,"{'H': -2.0, 'charge': -2.0}","H,charge",false,""
+FOLD3,"2-Amino-4-hydroxy-6-hydroxymethyl-7,8-dihydropteridine-diphosphate:4-aminobenzoate 2-amino-4-hydroxydihydropteridine-6-methenyltransferase","{'H': 1.0, 'charge': 1.0}","H,charge",false,2ahhmd_c
+MOD_2mbdhl,"3-methyl-2-oxobutanoate dehydrogenase, 2-Methyl-1-hydroxybutyl-ThPP transforming","{'H': -3.0, 'charge': -3.0}","H,charge",false,2mhob_m
+EAR60y,enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C6:0),"{'C': -11.0, 'H': -20.0, 'N': -2.0, 'O': -7.0, 'P': -1.0, 'charge': 1.0}","C,H,N,O,P,charge",true,""
+EAR181x,enoyl-[acyl-carrier-protein] reductase (NADH) ((11Z)-n-C18:1),"{'C': 11.0, 'H': 20.0, 'O': 7.0, 'R': -1.0, 'charge': -1.0, 'N': 2.0, 'P': 1.0, '*': 1.0}","*,C,H,N,O,P,R,charge",true,""
+DVPCHLD450OR,"divinylprotochlorophyllide oxidoreductase (light-dependent, 450 nm)",{'Z': -1.0},Z,true,""
+TAGAH1601819Z1835Z9Z12Z,"triacylglycerol acylhydrolase (16:0/18:1(9Z)/18:3(5Z,9Z,12Z))",{'charge': 1.0},charge,false,""
+ATDGDm,"ATP:dGDP phosphotransferase, mitochondria","{'H': -1.0, 'charge': -1.0}","H,charge",false,"dgdp_m,dgtp_m"
+10FTHFGLULL,10-Formyltetrahydrofolate:L-glutamate ligase (ADP-forming),{'charge': 2.0},charge,false,""
+ANNAT,ATP:nicotinamide-nucleotide adenylyltransferase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+GLPThi,glucose-1-phosphate adenylyltransferase (chloroplast),"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+AMPMSh,4-amino-2-methyl-5-phosphomethylpyrimidine synthetase (S-Adenosyl-L-methionine using),"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+3OAR40,3-oxoacyl-[acyl-carrier-protein] reductase (n-C4:0),"{'*': -1.0, 'R': 1.0}","*,R",true,""
+FGFTh,"N2-Formyl-N1-(5-phospho-D-ribosyl)glycinamide formyltransferase, chloroplast","{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+AGDI,"agmatine deiminase, mitochondria","{'H': -1.0, 'charge': -1.0}","H,charge",false,Ncbmpts_m
+PHOMSELCYSLh,"O-Phosphorylhomoserine succinate-lyase (adding cysteine), chloroplast","{'H': -1.0, 'charge': -1.0}","H,charge",false,selcyst_h
+MACPOMh,malonyl-[acyl-carrier protein] O-methyltransferase,"{'C': -14.0, 'H': -23.0, 'N': -3.0, 'O': -8.0, 'charge': 2.0, 'P': -1.0, '*': -1.0}","*,C,H,N,O,P,charge",true,""
+PPGPPDP,"guanosine-3',5'-bis(diphosphate) 3'-diphosphatase","{'H': -1.0, 'charge': -1.0}","H,charge",false,ppgpp_c
+PLDAGAT18111Z18111Z1819Z2,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa1801819Z_c
+PLPSD1819Z1819Z,phospholipase D (18:1(9Z)/18:1(9Z)),{'charge': 2.0},charge,false,""
+3OAR140,3-oxoacyl-[acyl-carrier-protein] reductase (n-C14:0),"{'R': -1.0, '*': 1.0}","*,R",true,""
+PLDAGAT1601819Z1819Z2,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa1801819Z_c
+PLDAGAT18111Z1819Z18111Z2,phospholipid: diacylglycerol acyltransferase (18:1(11Z)),{'charge': -2.0},charge,false,pa18111Z18111Z_c
+AGPATCOA18111Z1819Z,1-octadec-11-enoyl-sn-glycerol 3-phosphate O-acyltransferase ((9Z)-C18:1) (CoA substrate),{'charge': 2.0},charge,false,pa18111Z1819Z_c
+FADDP,FAD diphosphatase,"{'H': -2.0, 'charge': -2.0}","H,charge",false,""
+EAR60x,enoyl-[acyl-carrier-protein] reductase (NADH) (n-C6:0),"{'H': -20.0, 'charge': 1.0, 'C': -11.0, 'N': -2.0, 'O': -7.0, 'P': -1.0}","C,H,N,O,P,charge",true,""
+GDTP,Guanosine 3'-diphosphate 5'-triphosphate 5'-phosphohydrolase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,ppgpp_c
+GLACDH_m,"L-galactono-1,4-lactone dehydrogenase","{'C': -18.0, 'H': -40.0, 'O': -4.0, 'charge': 4.0, 'N': -8.0, 'S': -4.0}","C,H,N,O,S,charge",false,""
+GLYTLm,"glycine---tRNA ligase, mitochondria","{'C': -18.0, 'H': -22.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 3.0}","C,H,N,O,P,charge",true,""
+GTPCI,"GTP 7,8-8,9-dihydrolase","{'H': 1.0, 'charge': 1.0}","H,charge",false,ahdt_c
+KAS14,beta-ketoacyl-ACP synthase,"{'C': -14.0, 'H': -20.0, 'O': -8.0, 'R': -1.0, 'charge': 2.0, 'N': -3.0, 'P': -1.0}","C,H,N,O,P,R,charge",true,""
+PCHLD646OR,"protochlorophyllide oxidoreductase (light-dependent, 648 nm)",{'Z': -1.0},Z,true,""
+FE2TFENR,release of Fe(II) from transferrin,{'charge': 2.0},charge,true,""
+TYRTL,tyrosine---tRNA ligase,"{'C': -18.0, 'H': -23.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 2.0}","C,H,N,O,P,charge",true,""
+HIUH,hydroxyisourate hydrolase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,5hiu_m
+BUPN,beta-ureidopropionase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,cala_c
+MS,5-methyltetrahydropteroyltriglutamate---homocysteine S-methyltransferase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+FMETTRS,methionyl-tRNA formyltransferase,"{'C': 10.0, 'H': 17.0, 'O': 13.0, '*': 1.0, 'P': 2.0}","*,C,H,O,P",true,""
+gdpme,"GDP-D-mannose 3, 5-epimerase",{'charge': 2.0},charge,false,gdpgal_c
+PAPA1819Z1819Zh,"phosphatidate phosphatase (18:1(9Z)/18:1(9Z)), chloroplast",{'charge': -2.0},charge,false,"12dgr1819Z1819Z_h,pa1819Z1819Z_h"
+TMPPP2h,thiamine-phosphate diphosphorylase,"{'H': 1.0, 'charge': -1.0}","H,charge",false,""
+ASNtm,"Asparagine/H+ symporter, mitochondrial","{'H': 1.0, 'charge': 1.0}","H,charge",false,asn__L_m
+SELCYSTL,"Selenocystathionine L-homocysteine-lyase (deaminating), cytosol","{'H': 1.0, 'charge': 1.0}","H,charge",false,"selcyst_c,selhcys_c"
+FTCL,5-Formyltetrahydrofolate cyclo-ligase (ADP-forming),"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+SUCDHh,succinate dehydrogenase (chloroplast),"{'H': -2.0, 'charge': -2.0}","H,charge",false,""
+CHLASP,chlorophyll a synthase (phytyl),"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+DAGK1601819Z,diacylglycerol kinase (16:0/18:1(9Z)),{'charge': 2.0},charge,false,pa1601819Z_c
+PPCOAC,Propionyl-CoA carboxylase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+DNTPPA,Dihydroneopterin triphosphate pyrophosphatase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,ahdt_c
+LYSTL,lysine---tRNA ligase,"{'C': -18.0, 'H': -21.0, 'N': -6.0, 'O': -18.0, 'charge': 4.0, 'P': -3.0}","C,H,N,O,P,charge",true,""
+DGTPtm,"Deoxynucleotide carrier (dgtp), mitochondrial","{'H': 1.0, 'charge': 1.0}","H,charge",false,"dgdp_m,dgtp_m"
+PLDAGAT1801819Z18111Z2,phospholipid: diacylglycerol acyltransferase (18:1(11Z)),{'charge': -2.0},charge,false,pa18111Z18111Z_c
+MPMECY3,Mg-protoporphyrin IX monomethyl ester (oxidative) cyclase III,"{'H': 2.0, 'charge': 2.0}","H,charge",false,""
+HEMELm,heme c ligase (mitochondria),"{'*': -4.0, 'R': 4.0}","*,R",true,""
+APPAT,ATP:pantetheine-4'-phosphate adenylyltransferase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+PLDAGAT1819Z18111Z18111Z1,phospholipid: diacylglycerol acyltransferase (18:1(11Z)),{'charge': -2.0},charge,false,pa16018111Z_c
+LIPOASh,lipoic acid synthetase (octanoyl-ACP),"{'C': -11.0, 'H': -20.0, 'N': -2.0, 'O': -7.0, 'charge': 1.0, '*': -1.0, 'P': -1.0, 'R': 1.0}","*,C,H,N,O,P,R,charge",true,""
+SELCYSTLh,"Selenocystathionine L-homocysteine-lyase (deaminating), chloroplast","{'H': 1.0, 'charge': 1.0}","H,charge",false,selcyst_h
+ACOA160OR,Palmitoyl-CoA:oxygen 2-oxidoreductase,"{'H': -2.0, 'charge': -2.0}","H,charge",false,""
+THFGLUH,gamma-glutamyl hydrolase,"{'H': -2.0, 'charge': -2.0}","H,charge",false,thfglu_c
+MOD_4mop,"3-methyl-2-oxobutanoate dehydrogenase, 4-Methyl-2-oxopentanoate transforming","{'H': 3.0, 'charge': 3.0}","H,charge",false,3mhtpp_m
+1AGPEAT18111Z1835Z9Z12Z,"1-acylglycerophosphoethanolamine O-acyltransferase (18:1(11Z)/18:3(5Z,12Z,15Z))",{'charge': -4.0},charge,false,""
+PLDAGAT18111Z1819Z18111Z1,phospholipid: diacylglycerol acyltransferase (18:1(11Z)),{'charge': -2.0},charge,false,pa16018111Z_c
+ACOADAGAT1801819Z1835Z9Z12Z,"acyl-CoA: diacylglycerol acyltransferase (18:3(5Z,9Z,12Z))",{'charge': -4.0},charge,false,""
+HEMEOSm,heme o synthase (mitochondria),"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+ITK1K,inositol-tetrakisphosphate 1-kinase,"{'H': -2.0, 'charge': -2.0}","H,charge",false,mi13456p_c
+PLDAGAT1819Z1819Z18111Z1,phospholipid: diacylglycerol acyltransferase (18:1(11Z)),{'charge': -2.0},charge,false,pa16018111Z_c
+PLDAGAT1819Z18111Z1819Z3,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa18111Z1819Z_c
+MOD_3mop,"3-methyl-2-oxobutanoate dehydrogenase, 3-Methyl-2-oxopentanoate transforming","{'H': 3.0, 'charge': 3.0}","H,charge",false,2mhob_m
+ASPCTm,"aspartate carbamoyltransferase, mitochondria","{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+PLDAGAT16018111Z1819Z1,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa1601819Z_c
+GTHAMPOR,"AMP,sulfite:glutathione-disulfide oxidoreductase (adenosine-5'-phosphosulfate-forming), cytosol","{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+PLDAGAT1601819Z1819Z3,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa18111Z1819Z_c
+CACOAL,Coniferonic acid:CoA ligase (AMP-forming),{'charge': 4.0},charge,false,cacoa_c
+PLPSA21819Z1835Z9Z12Z,"phospholipase A2 (18:1(9Z)/18:3(5Z,12Z,15Z))",{'charge': 1.0},charge,false,""
+ATGDm,"ATP:GDP phosphotransferase, mitochondria","{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+CHLBSG,chlorophyll b synthase (geranylgeranyl),"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+PLDAGAT1819Z1819Z18111Z2,phospholipid: diacylglycerol acyltransferase (18:1(11Z)),{'charge': -2.0},charge,false,pa18111Z18111Z_c
+TGUAPRT,thioguanine phosphoribosyltransferase,"{'H': 2.0, 'charge': 2.0}","H,charge",false,""
+ARD1,"acireductone dioxygenase, CO forming","{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+AACPS4,long-chain-fatty-acid-[acyl-carrier-protein] ligase (16:1(9Z)),"{'H': 18.0, 'C': 11.0, 'N': 2.0, 'O': 7.0, 'P': 1.0}","C,H,N,O,P",true,""
+3HAD100,3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C10:0),"{'C': 11.0, 'H': 20.0, 'O': 7.0, 'charge': -1.0, 'N': 2.0, 'P': 1.0}","C,H,N,O,P,charge",true,""
+ACCOAhi,Acetyl-CoA carboxylase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+AGPATCOA16018111Z,1-hexadecanoyl-sn-glycerol 3-phosphate O-acyltransferase ((11Z)-C18:1) (CoA substrate),{'charge': 2.0},charge,false,pa16018111Z_c
+PPACOALm,"Propanoate:CoA ligase (AMP-forming), mitochondria","{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+3HAD140,3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C14:0),"{'C': 11.0, 'H': 20.0, 'O': 7.0, 'charge': -1.0, 'N': 2.0, 'P': 1.0}","C,H,N,O,P,charge",true,""
+papa16018111zhCv,"phosphatidate phosphatase (16:0/18:1(11z)), chloroplast",{'charge': -2.0},charge,false,""
+CHLAE,chlorophyll a epimerase,"{'H': 1.0, 'charge': -1.0}","H,charge",false,""
+PLDAGAT1801819Z1819Z1,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa1601819Z_c
+HP,"histidinol-phosphatase, cytosol","{'H': -1.0, 'charge': -1.0}","H,charge",false,histd_c
+DHPAH,"2,5-Diamino-6-hydroxy-4-(5-phosphoribosylamino)-pyrimidine 2-aminohydrolase","{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+PLDAGAT1819Z18111Z18111Z2,phospholipid: diacylglycerol acyltransferase (18:1(11Z)),{'charge': -2.0},charge,false,pa18111Z18111Z_c
+FTAL,5-Formiminotetrahydrofolate ammonia-lyase (cyclizing),"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+PAPA18111Z160h,phosphatidate phosphatase (18:1(11Z)/16:0),{'charge': -2.0},charge,false,""
+FA160ACPHi,fatty-acyl-ACP hydrolase (n-C16:0),{'H': 3.0},H,true,""
+ACOADAGAT1801819Z1845Z9Z12Z15Z,"acyl-CoA: diacylglycerol acyltransferase (18:4(5Z,9Z,12Z,15Z))",{'charge': -4.0},charge,false,cacoa_c
+PRAISh,"phosphoribosylaminoimidazolesuccinocarboxamide synthase, chloroplast","{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+ASNNA1tm,"Asparagine/Na+ symporter, mitochondrial","{'H': 1.0, 'charge': 1.0}","H,charge",false,asn__L_m
+SLCS,Selenocysteine synthase,"{'H': 3.0, 'charge': 3.0}","H,charge",true,""
+EAR180x,enoyl-[acyl-carrier-protein] reductase (NADH) (n-C18:0),"{'C': 11.0, 'H': 20.0, 'O': 7.0, 'R': -1.0, 'charge': -1.0, 'N': 2.0, 'P': 1.0, '*': 1.0}","*,C,H,N,O,P,R,charge",true,""
+DVPCHLD646OR,"divinylprotochlorophyllide oxidoreductase (light-dependent, 648 nm)",{'Z': -1.0},Z,true,""
+1AGPEAT1819Z1835Z9Z12Z,"1-acylglycerophosphoethanolamine O-acyltransferase (18:1(9Z)/18:3(5Z,12Z,15Z))",{'charge': -4.0},charge,false,""
+ACOA40OR,Butanoyl-CoA:oxygen 2-oxidoreductase,"{'H': -2.0, 'charge': -2.0}","H,charge",false,""
+HDH,"histidinol dehydrogenase, cytosol","{'H': 1.0, 'charge': 1.0}","H,charge",false,histd_c
+ILETL,isoleucine---tRNA ligase,"{'C': -18.0, 'H': -22.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 3.0}","C,H,N,O,P,charge",true,""
+ACOA140OR,"Tetradecanoyl-CoA:(acceptor) 2,3-oxidoreductase","{'H': -2.0, 'charge': -2.0}","H,charge",false,""
+PLDAGAT1819Z18111Z1819Z1,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa1601819Z_c
+ATNAH,(S)(+)-allantoin amidohydrolase,"{'H': -2.0, 'charge': -2.0}","H,charge",false,""
+ACOADAGAT18111Z18111Z1835Z9Z12Z,"acyl-CoA: diacylglycerol acyltransferase (18:3(5Z,9Z,12Z))",{'charge': -4.0},charge,false,""
+ACOADAGAT18111Z18111Z1845Z9Z12Z15Z,"acyl-CoA: diacylglycerol acyltransferase (18:4(5Z,9Z,12Z,15Z))",{'charge': -4.0},charge,false,cacoa_c
+OPC6COAAT,OPC-6:0 CoA:acetyl-CoA acyltransferase,"{'H': -4.0, 'charge': -4.0}","H,charge",false,""
+PLDAGAT1801819Z1601,phospholipid: diacylglycerol acyltransferase (16:0),{'charge': -2.0},charge,false,pa18111Z160_c
+EAR181y,enoyl-[acyl-carrier-protein] reductase (NADPH) ((11Z)-n-C18:1),"{'H': 20.0, 'charge': -1.0, 'C': 11.0, 'N': 2.0, 'O': 7.0, 'P': 1.0, 'R': -1.0, '*': 1.0}","*,C,H,N,O,P,R,charge",true,""
+PLPSD1801845Z9Z12Z15Z,"phospholipase D (18:0/18:4(5Z,9Z,12Z,15Z))",{'charge': 2.0},charge,false,""
+ACOATA,beta-ketoacyl-acyl-carrier-protein synthase III,"{'H': -3.0, '*': -1.0, 'R': 1.0}","*,H,R",true,""
+3HAD180,3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C18:0),"{'*': -1.0, 'R': 1.0}","*,R",true,""
+HGACPOh,3-hydroxyglutaryl-[acp]-methyl-ester:NADP+ oxidoreductase,"{'*': -1.0, 'R': 1.0}","*,R",true,""
+PRAIS,"phosphoribosylaminoimidazolesuccinocarboxamide synthase, cytosol","{'H': -1.0, 'charge': -1.0}","H,charge",false,5aizc_c
+THFGLUS,Tetrahydrofolate:L-glutamate gamma-ligase (ADP-forming),"{'H': 2.0, 'charge': 2.0}","H,charge",false,thfglu_c
+EAR140y,enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C14:0),"{'H': -20.0, 'charge': 1.0, 'C': -11.0, 'N': -2.0, 'O': -7.0, 'P': -1.0}","C,H,N,O,P,charge",true,""
+HISTL,histidine---tRNA ligase,"{'C': -18.0, 'H': -23.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 2.0}","C,H,N,O,P,charge",true,""
+CHLBSP,chlorophyll b synthase (phytyl),"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+3OAS60,3-oxoacyl-[acyl-carrier-protein] synthase (n-C6:0),"{'C': -14.0, 'H': -20.0, 'N': -3.0, 'O': -8.0, 'P': -1.0, '*': -1.0, 'charge': 2.0}","*,C,H,N,O,P,charge",true,""
+PAPA1819Z1819Z,phosphatidate phosphatase (18:1(9Z)/18:1(9Z)),{'charge': -2.0},charge,false,""
+OCTDPS,octaprenyl pyrophosphate synthase,"{'H': 5.0, 'charge': 5.0}","H,charge",false,""
+ACOADAGAT1819Z18111Z1835Z9Z12Z,"acyl-CoA: diacylglycerol acyltransferase (18:3(5Z,9Z,12Z))",{'charge': -4.0},charge,false,""
+ACOADAGAT18111Z1819Z1835Z9Z12Z,"acyl-CoA: diacylglycerol acyltransferase (18:3(5Z,9Z,12Z))",{'charge': -4.0},charge,false,""
+3OAR181,3-oxoacyl-[acyl-carrier-protein] reductase ((11Z)-n-C18:1),"{'C': 11.0, 'H': 20.0, 'O': 7.0, 'R': -1.0, 'charge': -1.0, 'N': 2.0, 'P': 1.0, '*': 1.0}","*,C,H,N,O,P,R,charge",true,""
+SQDGS160,sulfolipid synthase (16:0/16:0),{'charge': 1.0},charge,false,""
+AOXSh,8-amino-7-oxononanoate synthase (pimeloyl-ACP using),{'H': 3.0},H,true,""
+UGAH,ureidoglycine aminohydrolase,{'charge': -1.0},charge,false,udg_m
+CDPDAGS18111Z160,CDP-diacylglycerol synthetase (18:1(11Z)/16:0),{'charge': -2.0},charge,false,pa18111Z160_c
+ACP1619ZD9DS,acyl-[acyl-carrier-protein] delta9-desaturase ((9Z)-n-C16:1),"{'charge': -1.0, 'H': 20.0, 'O': 7.0, 'C': 11.0, 'N': 2.0, 'P': 1.0}","C,H,N,O,P,charge",true,""
+TAGAH1801819Z1835Z9Z12Z,"triacylglycerol acylhydrolase (18:0/18:1(9Z)/18:3(5Z,9Z,12Z))",{'charge': 1.0},charge,false,""
+PRDPARh,"5-phosphoribosylamine:diphosphate phospho-alpha-D-ribosyltransferase, chloroplast","{'H': 2.0, 'charge': 2.0}","H,charge",false,""
+DAGK1819Z18111Zh,"diacylglycerol kinase (18:1(9Z)/18:1(11Z)), chloroplast",{'charge': 2.0},charge,false,"12dgr1819Z18111Z_h,pa1819Z18111Z_h"
+ACOADAGAT1819Z1819Z1835Z9Z12Z,"acyl-CoA: diacylglycerol acyltransferase (18:3(5Z,9Z,12Z))",{'charge': -4.0},charge,false,""
+DAGK1819Z1819Zh,"diacylglycerol kinase (18:1(9Z)/18:1(9Z)), chloroplast",{'charge': 2.0},charge,false,"12dgr1819Z1819Z_h,pa1819Z1819Z_h"
+ASNtx,"Asparagine/H+ symporter, glyoxysomal","{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+PLDAGAT18111Z18111Z18111Z1,phospholipid: diacylglycerol acyltransferase (18:1(11Z)),{'charge': -2.0},charge,false,pa16018111Z_c
+PBALm,Pantoate:beta-alanine ligase (AMP-forming),"{'H': 2.0, 'charge': 2.0}","H,charge",false,""
+GACPACh,glutaryl-[acp]-methyl-ester:malonyl-[acyl-carrier protein] C-acyltransferase (decarboxylating),"{'C': -14.0, 'H': -20.0, 'N': -3.0, 'O': -8.0, 'P': -1.0, 'charge': 2.0, 'R': -1.0}","C,H,N,O,P,R,charge",true,""
+ARGDI,arginine deiminase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+ARGSL,argininosuccinate lyase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+PLPSD18111Z1835Z9Z12Z,"phospholipase D (18:1(11Z)/18:3(5Z,12Z,15Z))",{'charge': 2.0},charge,false,""
+EAR140x,enoyl-[acyl-carrier-protein] reductase (NADH) (n-C14:0),"{'H': -20.0, 'charge': 1.0, 'C': -11.0, 'N': -2.0, 'O': -7.0, 'P': -1.0}","C,H,N,O,P,charge",true,""
+PRFGCL,phosphoribosylformylglycinamidine cyclo-ligase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,air_c
+PACOAL,Pinolenic acid:CoA ligase (AMP-forming),{'charge': 3.0},charge,false,""
+PLPSD1801829Z12Z,"phospholipase D (18:0/18:2(9Z,12Z))",{'charge': 2.0},charge,false,""
+CDPDAGS1819Z160,CDP-diacylglycerol synthetase (18:1(9Z)/16:0),{'charge': -2.0},charge,false,""
+ACOA120OR,"Lauroyl-CoA:(acceptor) 2,3-oxidoreductase","{'H': -2.0, 'charge': -2.0}","H,charge",false,""
+MATm,"methionine adenosyltransferase, mitochondria","{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+PLDAGAT1819Z18111Z1819Z2,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa1801819Z_c
+PAPA1601819Z,phosphatidate phosphatase (16:0/18:1(9Z)),{'charge': -2.0},charge,false,pa1601819Z_c
+PLDAGAT18111Z1819Z1601,phospholipid: diacylglycerol acyltransferase (16:0),{'charge': -2.0},charge,false,pa18111Z160_c
+AGPATCOA1601819Z,1-hexadecanoyl-sn-glycerol 3-phosphate O-acyltransferase ((9Z)-C18:1) (CoA substrate),{'charge': 2.0},charge,false,pa1601819Z_c
+3HAD160,3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C16:0),"{'C': -11.0, 'H': -20.0, 'N': -2.0, 'O': -7.0, 'P': -1.0, 'charge': 1.0}","C,H,N,O,P,charge",true,""
+AACP1819ZS,long-chain-fatty-acid-[acyl-carrier-protein] ligase (18:1(9Z)),"{'H': -2.0, '*': -1.0, 'charge': 1.0, 'R': 1.0}","*,H,R,charge",true,""
+CBFC,cytochrome b6/f complex,{'charge': 2.0},charge,true,""
+AKGDHe2r,2-oxoglutarate dehydrogenase E2 component,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+PPACOALh,"Propanoate:CoA ligase (AMP-forming), chloroplast","{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+GUAD,guanine deaminase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+DAGK18111Z1819Z,diacylglycerol kinase (18:1(11Z)/18:1(9Z)),{'charge': 2.0},charge,false,pa18111Z1819Z_c
+SULR_ferr_2,sulfite reductase (ferredoxin),"{'charge': 1.0, 'H': 1.0}","H,charge",true,""
+CYOR_q8_m,ubiquinol-cytochrome c oxidoreductase Complex III,"{'C': -18.0, 'H': -40.0, 'N': -8.0, 'O': -4.0, 'S': -4.0, 'charge': 4.0}","C,H,N,O,S,charge",false,"ficytc_m,focytc_m"
+MOD_3mhtpp,"3-methyl-2-oxobutanoate dehydrogenase, 3-Methyl-1-hydroxybutyl-ThPP transforming","{'H': -3.0, 'charge': -3.0}","H,charge",false,3mhtpp_m
+3OACOAS,3-oxoacyl-CoA synthase (18:0),"{'H': 1.0, 'charge': 1.0}","H,charge",false,malcoa_c
+AHAL,O-acetyl-L-homoserine acetate-lyase,"{'H': -1.0, 'charge': -1.0}","H,charge",true,""
+TRPTL,tryptophan---tRNA ligase,"{'C': -18.0, 'H': -23.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 2.0}","C,H,N,O,P,charge",true,""
+PLPSD18111Z1829Z12Z,"phospholipase D (18:1(11Z)/18:2(9Z,12Z))",{'charge': 2.0},charge,false,""
+3HAD120,3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C12:0),"{'C': -11.0, 'H': -20.0, 'N': -2.0, 'O': -7.0, 'P': -1.0, 'charge': 1.0}","C,H,N,O,P,charge",true,""
+DMCITALOR,demethylcitalopram:oxygen oxidoreductase (deaminating),"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+DAGK1801819Z,diacylglycerol kinase (18:0/18:1(9Z)),{'charge': 2.0},charge,false,pa1801819Z_c
+ACOA80OR,Octanoyl-CoA:oxygen 2-oxidoreductase,"{'H': -2.0, 'charge': -2.0}","H,charge",false,""
+PPDKh,pyruvate phosphate dikinase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+GTHAMPORh,"AMP,sulfite:glutathione-disulfide oxidoreductase (adenosine-5'-phosphosulfate-forming), chloroplast","{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+PLPSA218111Z1835Z9Z12Z,"phospholipase A2 (18:1(11Z)/18:3(5Z,12Z,15Z))",{'charge': 1.0},charge,false,""
+ACHMSSELCYSLh,"O-Acetylhomoserine succinate-lyase (adding cysteine), chloroplast","{'H': -1.0, 'charge': -1.0}","H,charge",false,selcyst_h
+GPAR,GMP:diphosphate 5-phospho-alpha-D-ribosyltransferase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+3OAR180,3-oxoacyl-[acyl-carrier-protein] reductase (n-C18:0),"{'C': -11.0, 'H': -20.0, 'N': -2.0, 'O': -7.0, 'P': -1.0, 'charge': 1.0}","C,H,N,O,P,charge",true,""
+UDPSQS,UDP-sulfoquinovose synthase,"{'charge': 1.0, 'H': 1.0}","H,charge",false,""
+AACPS5,long-chain-fatty-acid-[acyl-carrier-protein] ligase (18:1(11Z)),"{'H': 18.0, 'C': 11.0, 'N': 2.0, 'O': 7.0, 'P': 1.0}","C,H,N,O,P",true,""
+PAPA1819Z18111Z,phosphatidate phosphatase (18:1(9Z)/18:1(11Z)),{'charge': -2.0},charge,false,""
+SECYSTL,selenocysteine---tRNA ligase,"{'C': 5.0, 'H': 11.0, 'N': -5.0, 'O': 13.0, '*': 2.0, 'charge': -2.0, 'P': 2.0}","*,C,H,N,O,P,charge",true,""
+g1ppCv,L-galactose 1-phosphate phosphatase,{'charge': -2.0},charge,false,""
+ACOAD10m,"2-methylacyl-coa dehydrogenase, trans-2-Methylbut-2-enoyl-CoA forming","{'H': -2.0, 'charge': -2.0}","H,charge",false,""
+GALO,galactose oxidase,"{'H': 1.0, 'O': 1.0, 'charge': -1.0}","H,O,charge",false,""
+PBAL,pantoate---beta-alanine ligase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+ACCOAC,Acetyl-CoA carboxylase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,malcoa_c
+LEUTL,leucine---tRNA ligase,"{'C': -18.0, 'H': -22.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 3.0}","C,H,N,O,P,charge",true,""
+AO,amine oxidase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,hista_c
+MHGS,hydroxymethylglutaryl-coa synthase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+PLPSA21829Z12Z1835Z9Z12Z,"phospholipase A2 (18:2(9Z,12Z)/18:3(5Z,12Z,15Z))",{'charge': 1.0},charge,false,""
+SUCDHm,succinate dehydrogenase Complex II,"{'H': -2.0, 'charge': -2.0}","H,charge",false,""
+ADSS,adenylosuccinate synthase,"{'H': 4.0, 'charge': 4.0}","H,charge",false,dcamp_c
+ASPTL,aspartate---tRNA ligase,"{'C': -18.0, 'H': -21.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 4.0}","C,H,N,O,P,charge",true,""
+PLDAGAT16018111Z18111Z1,phospholipid: diacylglycerol acyltransferase (18:1(11Z)),{'charge': -2.0},charge,false,pa16018111Z_c
+TAGAH18111Z1819Z1835Z9Z12Z,"triacylglycerol acylhydrolase (18:1(11Z)/18:1(9Z)/18:3(5Z,9Z,12Z))",{'charge': 1.0},charge,false,""
+MTAM,"5,10-Methenyltetrahydrofolate aminomethyltransferase","{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+AACPS3,long-chain-fatty-acid-[acyl-carrier-protein] ligase (16:0),"{'H': -2.0, 'charge': 1.0}","H,charge",true,""
+GMPSm,"GMP synthase, mitochondria","{'H': 2.0, 'charge': 2.0}","H,charge",false,""
+PLDAGAT18111Z18111Z1601,phospholipid: diacylglycerol acyltransferase (16:0),{'charge': -2.0},charge,false,pa18111Z160_c
+ACOA60OR,"Hexanoyl-CoA:(acceptor) 2,3-oxidoreductase","{'H': -2.0, 'charge': -2.0}","H,charge",false,""
+DHROm,"dihydroorotate oxidase, mitochondria","{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+AMID,acetamidase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+CDPDAGS1819Z160h,"CDP-diacylglycerol synthetase (18:1(9Z)/16:0), chloroplast","{'H': 1.0, 'charge': -1.0}","H,charge",false,""
+THRTLm,"threonine---tRNA ligase, mitochondria","{'C': -18.0, 'H': -22.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 3.0}","C,H,N,O,P,charge",true,""
+3OAS100,3-oxoacyl-[acyl-carrier-protein] synthase (n-C10:0),"{'C': -25.0, 'H': -40.0, 'N': -5.0, 'O': -15.0, 'P': -2.0, '*': -2.0, 'charge': 3.0, 'R': 1.0}","*,C,H,N,O,P,R,charge",true,""
+GCPN,"Guanosine 3',5'-cyclic phosphate 5'-nucleotidohydrolase","{'H': -1.0, 'charge': -1.0}","H,charge",false,35cgmp_c
+DAGK1801819Zh,"diacylglycerol kinase (18:0/18:1(9Z)), chloroplast",{'charge': 2.0},charge,false,"12dgr1801819Z_h,pa1801819Z_h"
+HMGL,hydroxymethylglutaryl-coa lyase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+AACPS6,long-chain-fatty-acid-[acyl-carrier-protein] ligase (18:0),"{'H': 18.0, 'C': 11.0, 'N': 2.0, 'O': 7.0, 'P': 1.0}","C,H,N,O,P",true,""
+PACPT,propionyladenylate:CoA propionyltransferase,{'charge': -1.0},charge,false,""
+DAGK1819Z1819Z,diacylglycerol kinase (18:1(9Z)/18:1(9Z)),{'charge': 2.0},charge,false,""
+ASNTL,asparagine---tRNA ligase,"{'C': -18.0, 'H': -22.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 3.0}","C,H,N,O,P,charge",true,asn__L_m
+ALLTNtm,"Allantoin permease, mitochondrial","{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+PLDAGAT16018111Z18111Z2,phospholipid: diacylglycerol acyltransferase (18:1(11Z)),{'charge': -2.0},charge,false,pa18111Z18111Z_c
+PPRGL,phosphoribosylamine---glycine ligase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+3OAS140,3-oxoacyl-[acyl-carrier-protein] synthase (n-C14:0),"{'C': -14.0, 'H': -20.0, 'O': -8.0, '*': -2.0, 'charge': 2.0, 'N': -3.0, 'P': -1.0, 'R': 1.0}","*,C,H,N,O,P,R,charge",true,""
+3OAS80,3-oxoacyl-[acyl-carrier-protein] synthase (n-C8:0),"{'C': -3.0, 'O': -1.0, '*': -1.0, 'charge': 1.0, 'N': -1.0}","*,C,N,O,charge",true,""
+PLDAGAT18111Z1819Z1819Z2,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa1801819Z_c
+PLPSD1819Z1835Z9Z12Z,"phospholipase D (18:1(9Z)/18:3(5Z,12Z,15Z))",{'charge': 2.0},charge,false,""
+1AGPEAT1819Z1845Z9Z12Z15Z,"1-acylglycerophosphoethanolamine O-acyltransferase (18:1(9Z)/18:4(5Z,9Z,12Z,15Z))",{'charge': -4.0},charge,false,cacoa_c
+PAPA18111Z1819Z,phosphatidate phosphatase (18:1(11Z)/18:1(9Z)),{'charge': -2.0},charge,false,pa18111Z1819Z_c
+TAGAH1819Z1819Z1835Z9Z12Z,"triacylglycerol acylhydrolase (18:1(9Z)/18:1(9Z)/18:3(5Z,9Z,12Z))",{'charge': 1.0},charge,false,""
+PLPSD1801835Z9Z12Z,"phospholipase D (18:0/18:3(5Z,12Z,15Z))",{'charge': 2.0},charge,false,""
+TAGAH18111Z18111Z1835Z9Z12Z,"triacylglycerol acylhydrolase (18:1(11Z)/18:1(11Z)/18:3(5Z,9Z,12Z))",{'charge': 1.0},charge,false,""
+METTL,methionine---tRNA ligase,"{'C': -18.0, 'H': -22.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 3.0}","C,H,N,O,P,charge",true,""
+DHPD,dihydropyrimidinase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,cala_c
+PLDAGAT18111Z18111Z18111Z2,phospholipid: diacylglycerol acyltransferase (18:1(11Z)),{'charge': -2.0},charge,false,pa18111Z18111Z_c
+URCB,urea carboxylase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+PLPSD18111Z1845Z9Z12Z15Z,"phospholipase D (18:1(11Z)/18:4(5Z,9Z,12Z,15Z))",{'charge': 2.0},charge,false,""
+papa1819z160Cv,phosphatidate phosphatase (18:1(9z)/16:0),{'charge': -2.0},charge,false,12dgr1819Z160_c
+PLPSD18111Z1819Z,phospholipase D (18:1(11Z)/18:1(9Z)),{'charge': 2.0},charge,false,pa18111Z1819Z_c
+EAR100x,enoyl-[acyl-carrier-protein] reductase (NADH) (n-C10:0),"{'H': -20.0, 'charge': 1.0, 'C': -11.0, 'N': -2.0, 'O': -7.0, 'P': -1.0, '*': -1.0, 'R': 1.0}","*,C,H,N,O,P,R,charge",true,""
+PLDAGAT1819Z1819Z1601,phospholipid: diacylglycerol acyltransferase (16:0),{'charge': -2.0},charge,false,pa18111Z160_c
+EAR100y,enoyl-[acyl-carrier-protein] reductase (NADPH) (n-C10:0),"{'H': -20.0, 'charge': 1.0, 'C': -11.0, 'N': -2.0, 'O': -7.0, 'P': -1.0, '*': -1.0, 'R': 1.0}","*,C,H,N,O,P,R,charge",true,""
+MCOATA,malonyl-CoA:[acyl-carrier-protein] S-malonyltransferase,"{'H': 21.0, '*': 1.0, 'charge': -1.0, 'C': 14.0, 'N': 3.0, 'O': 8.0, 'P': 1.0}","*,C,H,N,O,P,charge",true,""
+PLDAGAT1801819Z18111Z1,phospholipid: diacylglycerol acyltransferase (18:1(11Z)),{'charge': -2.0},charge,false,pa16018111Z_c
+1AGPEAT1829Z12Z1835Z9Z12Z,"1-acylglycerophosphoethanolamine O-acyltransferase (18:2(9Z,12Z)/18:3(5Z,12Z,15Z))",{'charge': -4.0},charge,false,""
+MCDC,malonyl-CoA decarboxylase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,malcoa_c
+DAGK16018111Z,diacylglycerol kinase (16:0/18:1(11Z)),{'charge': 2.0},charge,false,pa16018111Z_c
+3OAS120,3-oxoacyl-[acyl-carrier-protein] synthase (n-C12:0),"{'C': -3.0, 'O': -1.0, 'R': -1.0, 'charge': 1.0, 'N': -1.0}","C,N,O,R,charge",true,""
+TAGAH1819Z18111Z1835Z9Z12Z,"triacylglycerol acylhydrolase (18:1(9Z)/18:1(11Z)/18:3(5Z,9Z,12Z))",{'charge': 1.0},charge,false,""
+ANTPPT,N-(5-Phospho-D-ribosyl)anthranilate:pyrophosphate phosphoribosyl-transferase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+ADSSh,"adenylosuccinate synthase, chloroplast","{'H': 5.0, 'charge': 5.0}","H,charge",false,""
+10FTHFGLULLm,10-Formyltetrahydrofolate:L-glutamate ligase (ADP-forming),{'charge': 2.0},charge,false,""
+PAPA1819Z1619Zh,phosphatidate phosphatase (18:1(9Z)/16:1(9Z)),{'charge': -2.0},charge,false,pa1819Z1619Z_h
+LLDH_ferr_m,L-lactate dehydrogenase (cytochrome),"{'C': -18.0, 'H': -40.0, 'N': -8.0, 'O': -4.0, 'S': -4.0, 'charge': 4.0}","C,H,N,O,S,charge",false,"ficytc_m,focytc_m"
+DHR,dihydroorotase,"{'H': 2.0, 'charge': 2.0}","H,charge",false,""
+VALTL,valine---tRNA ligase,"{'C': -18.0, 'H': -22.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 3.0}","C,H,N,O,P,charge",true,""
+PLPSD1819Z1829Z12Z,"phospholipase D (18:1(9Z)/18:2(9Z,12Z))",{'charge': 2.0},charge,false,""
+SEAHCYSHYD,Se-Adenosylselenohomocysteine hydrolase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,selhcys_c
+ACOADAGAT1819Z1819Z1845Z9Z12Z15Z,"acyl-CoA: diacylglycerol acyltransferase (18:4(5Z,9Z,12Z,15Z))",{'charge': -4.0},charge,false,cacoa_c
+MPMECY2,Mg-protoporphyrin IX monomethyl ester (oxidative) cyclase II,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+OPC8COAOR,OPC-8:0 CoA:oxygen 2-oxidoreductase,"{'H': 2.0, 'charge': 2.0}","H,charge",false,""
+GMPS_glu_m,"GMP synthase (glutamine-hydrolysing), mitochondria","{'H': 2.0, 'charge': 2.0}","H,charge",false,""
+GLYATx,Acetyl-CoA:glycine C-acetyltransferase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+GLUTL,glutamate---tRNA ligase,"{'C': -18.0, 'H': -22.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 3.0}","C,H,N,O,P,charge",true,""
+PLDAGAT1601819Z18111Z1,phospholipid: diacylglycerol acyltransferase (18:1(11Z)),{'charge': -2.0},charge,false,pa16018111Z_c
+PLDAGAT16018111Z1601,phospholipid: diacylglycerol acyltransferase (16:0),{'charge': -2.0},charge,false,pa18111Z160_c
+SQDGS18111Z160,sulfolipid synthase (18:1(11Z)/16:0),{'charge': 1.0},charge,false,""
+FA80ACPHi,fatty-acyl-ACP hydrolase (n-C8:0),"{'H': -17.0, 'O': -7.0, 'charge': 1.0, 'C': -11.0, 'N': -2.0, 'P': -1.0}","C,H,N,O,P,charge",true,""
+ARDP,ADP-ribose diphosphatase,"{'H': -2.0, 'charge': -2.0}","H,charge",false,""
+FA1819ZACPH,oleoyl-[acyl-carrier-protein] hydrolase ((9Z)-n-C18:1),"{'H': 3.0, 'R': -1.0, '*': 1.0}","*,H,R",true,""
+ACDO,acireductone dioxygenase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+ACOADAGAT16018111Z1835Z9Z12Z,"acyl-CoA: diacylglycerol acyltransferase (18:3(5Z,9Z,12Z))",{'charge': -4.0},charge,false,""
+3HAD40,3-hydroxyacyl-[acyl-carrier-protein] dehydratase (n-C4:0),"{'C': 11.0, 'H': 20.0, 'O': 7.0, 'R': -1.0, 'charge': -1.0, 'N': 2.0, 'P': 1.0, '*': 1.0}","*,C,H,N,O,P,R,charge",true,""
+VALTLh,"valine---tRNA ligase, chloroplast","{'C': -18.0, 'H': -21.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 4.0}","C,H,N,O,P,charge",true,""
+MOD_2mhop,"3-methyl-2-oxobutanoate dehydrogenase, 2-Methyl-1-hydroxypropyl-ThPP transforming",{'charge': -2.0},charge,false,2mhop_m
+PLDAGAT1819Z1819Z1819Z1,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa1601819Z_c
+APAT,ATP:propanoate adenyltransferase,"{'H': 1.0, 'charge': 2.0}","H,charge",false,""
+PLDAGAT1601819Z18111Z2,phospholipid: diacylglycerol acyltransferase (18:1(11Z)),{'charge': -2.0},charge,false,pa18111Z18111Z_c
+GTHS,glutathione synthase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+SULO,sulfite oxidase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+HPPK,"ATP:2-amino-4-hydroxy-6-hydroxymethyl-7,8-dihydropteridine 6'-pyrophosphotransferase","{'H': -1.0, 'charge': -1.0}","H,charge",false,2ahhmd_c
+SUCHMSSELCYSLh,"O-Succinyl-L-homoserine succinate-lyase (adding cysteine), chloroplast","{'H': -1.0, 'charge': -1.0}","H,charge",false,selcyst_h
+ACOAD9m,"2-methylacyl-coa dehydrogenase, 2-Methylprop-2-enoyl-CoA forming","{'H': -2.0, 'charge': -2.0}","H,charge",false,""
+ACSERL,"O3-Acetyl-L-serine acetate-lyase (adding hydrogen sulfide), cytosol","{'H': 3.0, 'charge': 3.0}","H,charge",false,seln_c
+PLDAGAT1801819Z1819Z2,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa1801819Z_c
+AGMIS,1-alpha-D-Galactosyl-myo-inositol:sucrose,"{'C': -18.0, 'H': -32.0, 'O': -16.0}","C,H,O",false,""
+FA140ACPHi,fatty-acyl-ACP hydrolase (n-C14:0),{'H': 3.0},H,true,""
+3OAR100,3-oxoacyl-[acyl-carrier-protein] reductase (n-C10:0),"{'R': -1.0, '*': 1.0}","*,R",true,""
+papa181hCv,"phosphatidate phosphatase (18:1(11z)/18:1(11z)), chloroplast",{'charge': -2.0},charge,false,"12dgr18111z18111z_h,pa18111z18111z_h"
+AMAOTh,adenosylmethionine-8-amino-7-oxononanoate transaminase,{'charge': -1.0},charge,false,""
+3HAD181,3-hydroxyacyl-[acyl-carrier-protein] dehydratase ((11Z)-n-C18:1),"{'C': -11.0, 'H': -20.0, 'N': -2.0, 'O': -7.0, 'P': -1.0, '*': -1.0, 'charge': 1.0, 'R': 1.0}","*,C,H,N,O,P,R,charge",true,""
+SELCYSLY2,Selenocysteine reductase,"{'H': -3.0, 'charge': -3.0}","H,charge",false,seln_c
+CDPDAGS18111Z160h,"CDP-diacylglycerol synthetase (18:1(11Z)/16:0), chloroplast","{'H': 1.0, 'charge': -1.0}","H,charge",false,""
+MOD,3-methyl-2-oxobutanoate dehydrogenase,{'charge': 2.0},charge,false,2mhop_m
+MACPACh,malonyl-[acyl-carrier protein]-methyl-ester:malonyl-[acyl-carrier protein] C-acyltransferase,"{'C': -14.0, 'H': -20.0, 'N': -3.0, 'O': -8.0, 'P': -1.0, '*': -1.0, 'charge': 2.0}","*,C,H,N,O,P,charge",true,""
+FA161ACPHi,fatty-acyl-ACP hydrolase ((9Z)-n-C16:1),"{'H': -17.0, 'O': -7.0, 'charge': 1.0, 'C': -11.0, 'N': -2.0, 'P': -1.0}","C,H,N,O,P,charge",true,""
+IDPm,inorganic pyrophosphatase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+D_LACDHm,D-lactate dehydrogenase (cytochrome),"{'C': -18.0, 'H': -40.0, 'N': -8.0, 'O': -4.0, 'S': -4.0, 'charge': 4.0}","C,H,N,O,S,charge",false,"ficytc_m,focytc_m"
+LLDH_ferr_x,L-Lactate dehydrogenase (ferricytochrome),"{'C': -18.0, 'H': -40.0, 'N': -8.0, 'O': -4.0, 'S': -4.0, 'charge': 4.0}","C,H,N,O,S,charge",false,""
+PAPA1801819Z,phosphatidate phosphatase (18:0/18:1(9Z)),{'charge': -2.0},charge,false,pa1801819Z_c
+FGFTm,"N2-Formyl-N1-(5-phospho-D-ribosyl)glycinamide formyltransferase, mitochondria","{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+PLDAGAT1601819Z1819Z1,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa1601819Z_c
+FA120ACPHi,fatty-acyl-ACP hydrolase (n-C12:0),{'H': 3.0},H,true,""
+NITR_NO,nitrite reductase (NO-forming),"{'C': 9.0, 'H': 20.0, 'N': 4.0, 'O': 2.0, 'charge': -2.0, 'S': 2.0}","C,H,N,O,S,charge",false,""
+G1SAT,glutamate-1-semialdehyde aminotransferase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,5aop_h
+IDPh,Inorganic diphosphatase,"{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+1AGPEAT18111Z1845Z9Z12Z15Z,"1-acylglycerophosphoethanolamine O-acyltransferase (18:1(11Z)/18:4(5Z,9Z,12Z,15Z))",{'charge': -4.0},charge,false,cacoa_c
+DAGK1819Z18111Z,diacylglycerol kinase (18:1(9Z)/18:1(11Z)),{'charge': 2.0},charge,false,""
+SUCBZLh,O-succinylbenzoate-CoA ligase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+TMPPPh,thiamine-phosphate diphosphorylase (4-Methyl-5-(2-phosphoethyl)thiazole using),"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+PAPA18111Z1819Zh,"phosphatidate phosphatase (18:1(11Z)/18:1(9Z)), chloroplast",{'charge': -2.0},charge,false,"12dgr18111Z1819Z_h,pa18111Z1819Z_h"
+ATAH_co2,allantoate amidinohydrolase (decarboxylating),{'charge': 1.0},charge,false,udg_m
+NPH,NAD+ phosphohydrolase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+FNORh,ferredoxin---NADP+ reductase,{'charge': -1.0},charge,true,""
+3OAS160,3-oxoacyl-[acyl-carrier-protein] synthase (n-C16:0),"{'C': -3.0, 'N': -1.0, 'O': -1.0, '*': -1.0, 'charge': 1.0}","*,C,N,O,charge",true,""
+AGPATCOA18111Z18111Z,1-octadec-11-enoyl-sn-glycerol 3-phosphate O-acyltransferase ((11Z)-C18:1) (CoA substrate),{'charge': 2.0},charge,false,pa18111Z18111Z_c
+NOS,nitric-oxide synthase,"{'H': -2.0, 'charge': -2.0}","H,charge",false,""
+ASPCT,"aspartate carbamoyltransferase, cytosol","{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+FA181ACPHi,oleoyl-[acyl-carrier-protein] hydrolase ((11Z)-n-C18:1),"{'H': -17.0, 'O': -7.0, 'charge': 1.0, 'C': -11.0, 'N': -2.0, 'P': -1.0}","C,H,N,O,P,charge",true,""
+PLDAGAT16018111Z1819Z3,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa18111Z1819Z_c
+PLDAGAT18111Z18111Z1819Z1,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa1601819Z_c
+AGPATCOA1801819Z,1-octadecanoyl-sn-glycerol 3-phosphate O-acyltransferase ((9Z)-C18:1) (CoA substrate),{'charge': 2.0},charge,false,pa1801819Z_c
+PLPSD1801819Z,phospholipase D (18:0/18:1(9Z)),{'charge': 2.0},charge,false,pa1801819Z_c
+DAGK1819Z1619Zh,diacylglycerol kinase (18:1(9Z)/16:1(9Z)),{'charge': 2.0},charge,false,pa1819Z1619Z_h
+PLDAGAT18111Z1819Z1819Z3,phospholipid: diacylglycerol acyltransferase (18:1(9Z)),{'charge': -2.0},charge,false,pa18111Z1819Z_c
+DAGK181,diacylglycerol kinase (18:1(11Z)/18:1(11Z)),{'charge': 2.0},charge,false,pa18111Z18111Z_c
+GUAC,guanylate cyclase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,35cgmp_c
+AFAT,ATP:FMN adenylyltransferase,"{'H': 2.0, 'charge': 2.0}","H,charge",false,""
+HBZOPT,hydroxybenzoate octaprenyltransferase,"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+GLNTL,glutamine---tRNA ligase,"{'C': -18.0, 'H': -22.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 3.0}","C,H,N,O,P,charge",true,""
+THRTL,threonine---tRNA ligase,"{'C': -18.0, 'H': -23.0, 'N': -6.0, 'O': -18.0, 'P': -3.0, 'charge': 2.0}","C,H,N,O,P,charge",true,""
+ACOA100OR,"Decanoyl-CoA:(acceptor) 2,3-oxidoreductase","{'H': -2.0, 'charge': -2.0}","H,charge",false,""
+PLDAGAT1601819Z1601,phospholipid: diacylglycerol acyltransferase (16:0),{'charge': -2.0},charge,false,pa18111Z160_c
+QUINDHh,Quinate dehydrogenase (NADP),"{'H': 1.0, 'charge': 1.0}","H,charge",false,""
+GDPMEP_c,"GDP-mannose 3,5 epimerase",{'charge': 2.0},charge,false,gdpgal_c
+GDPGALPL_c,GDP-L-galactose phosphorylase,{'charge': -2.0},charge,false,gdpgal_c
+GLACDHh,"L-galactono-1,4-lactone dehydrogenase","{'C': -18.0, 'H': -39.0, 'N': -8.0, 'O': -4.0, 'S': -4.0, 'charge': 5.0}","C,H,N,O,S,charge",false,""
+ASCBt_u,"Ascorbate exchange, thylakoid","{'H': -1.0, 'charge': -1.0}","H,charge",false,""
+GULACDHh,"L-gulono-1,4-lactone dehydrogenase","{'C': -18.0, 'H': -39.0, 'N': -8.0, 'O': -4.0, 'S': -4.0, 'charge': 5.0}","C,H,N,O,S,charge",false,""
+METARHODOPSINHh,Metarhodopsin hydrolase (spontaneous),"{'charge': 2.0, '*': -1.0}","*,charge",true,""
+RHODOPSINRTh,Rhodopsin retinyltransferase (spontaneous),"{'H': 10.0, 'charge': -2.0, 'C': 6.0, 'O': 2.0, 'N': 2.0, '*': 2.0}","*,C,H,N,O,charge",true,""
+HEMEASm,Heme a synthase (mitochondria),"{'H': 1.0, 'charge': 5.0}","H,charge",false,""
+HCIT,homocitrate synthase,{'charge': 1.0},charge,false,""
+2ogtmhCv,2-oxoglutaramate amidohydrolase,{'charge': 1.0},charge,false,""
